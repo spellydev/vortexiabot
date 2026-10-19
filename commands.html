@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortexia Bot Commands List — Full Discord Bot Commands</title>
+  <meta name="description" content="Complete list of Vortexia Bot commands for music, moderation, tickets, economy, levels and utility. Easy slash commands for your Discord server." />
+  <meta name="keywords" content="Vortexia, Vortexia bot, Vortexia Discord bot, Discord music bot, free Discord bot, Discord moderation bot, Discord ticket bot, Discord economy bot" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#FF4D00" />
+  <link rel="canonical" href="https://vortexia.run.place/commands.html" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:site_name" content="Vortexia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vortexia Bot Commands List — Full Discord Bot Commands" />
+  <meta property="og:description" content="Complete list of Vortexia Bot commands for music, moderation, tickets, economy, levels and utility. Easy slash commands for your Discord server." />
+  <meta property="og:url" content="https://vortexia.run.place/commands.html" />
+  <meta property="og:image" content="https://vortexia.run.place/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Vortexia Discord Bot" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vortexia Bot Commands List — Full Discord Bot Commands" />
+  <meta name="twitter:description" content="Complete list of Vortexia Bot commands for music, moderation, tickets, economy, levels and utility. Easy slash commands for your Discord server." />
+  <meta name="twitter:image" content="https://vortexia.run.place/og-image.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vortexia.run.place/"}, {"@type": "ListItem", "position": 2, "name": "Commands", "item": "https://vortexia.run.place/commands.html"}]}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="logo-link"><img src="logo.png" alt="Vortexia Bot logo" class="logo-img" width="40" height="40" decoding="async" /><span>VORTEXIA</span></a>
+      <nav class="nav-desktop" aria-label="Main">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="commands.html" class="nav-link active" aria-current="page">Commands</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-primary btn-header press">Add to Discord</a>
+      <button class="menu-btn press" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" type="button">MENU</button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <div class="mobile-logo"><img src="logo.png" alt="" width="44" height="44" /><span>VORTEXIA</span></div>
+    <a href="features.html" class="mobile-link">Features</a>
+    <a href="commands.html" class="mobile-link">Commands</a>
+    <a href="reviews.html" class="mobile-link">Reviews</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="faq.html" class="mobile-link">FAQ</a>
+    <a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-primary press">Add to Discord</a>
+  </div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-bg"></div>
+      <div class="page-hero-inner reveal">
+        <span class="badge">COMMANDS</span>
+        <h1 class="page-title">TYPE /<br><span style="color:var(--primary)">AND GO.</span></h1>
+        <p class="page-lead">Search and filter commands. Copy the example and paste it into Discord.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem">
+      <div class="cmd-toolbar reveal">
+        <input type="search" id="cmdSearch" class="cmd-search" placeholder="Search commands..." autocomplete="off" />
+        <div class="cmd-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="music">Music</button>
+          <button class="filter-btn" data-filter="moderation">Moderation</button>
+          <button class="filter-btn" data-filter="tickets">Tickets</button>
+          <button class="filter-btn" data-filter="economy">Economy</button>
+          <button class="filter-btn" data-filter="utility">Utility</button>
+        </div>
+      </div>
+
+      <div class="cmd-grid">
+        <!-- MUSIC -->
+        <article class="cmd-card reveal" data-cat="music">
+          <div class="cmd-top"><code>/music</code><span class="cmd-cat">Music</span></div>
+          <p class="cmd-desc">Open the full music player panel in the current channel.</p>
+          <div class="cmd-how"><strong>How to use</strong>Join a voice channel, then type <code>/music</code>. Use the buttons to play, pause, skip, loop and open the queue.</div>
+          <button class="copy-btn" data-cmd="/music">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="music">
+          <div class="cmd-top"><code>/play</code><span class="cmd-cat">Music</span></div>
+          <p class="cmd-desc">Search and play a track or playlist from the player.</p>
+          <div class="cmd-how"><strong>How to use</strong>Open <code>/music</code>, press Play, or use search on the panel. Supports YouTube, Spotify links and queries.</div>
+          <button class="copy-btn" data-cmd="/play">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="music">
+          <div class="cmd-top"><code>/queue</code><span class="cmd-cat">Music</span></div>
+          <p class="cmd-desc">View and manage the current song queue.</p>
+          <div class="cmd-how"><strong>How to use</strong>From the music panel click Queue, or use the queue button to see upcoming tracks and reorder.</div>
+          <button class="copy-btn" data-cmd="/queue">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="music">
+          <div class="cmd-top"><code>/lyrics</code><span class="cmd-cat">Music</span></div>
+          <p class="cmd-desc">Show lyrics for the current track when available.</p>
+          <div class="cmd-how"><strong>How to use</strong>While a song is playing, open the panel and tap Lyrics — or run the lyrics action from controls.</div>
+          <button class="copy-btn" data-cmd="/lyrics">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="music">
+          <div class="cmd-top"><code>/247</code><span class="cmd-cat">Music</span></div>
+          <p class="cmd-desc">Keep the bot in voice 24/7 even when the queue is empty.</p>
+          <div class="cmd-how"><strong>How to use</strong>Enable 24/7 mode from the music panel. The bot stays connected until you disable it.</div>
+          <button class="copy-btn" data-cmd="/247">Copy</button>
+        </article>
+
+        <!-- MODERATION -->
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/ban</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Permanently ban a member from the server.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/ban user:@User reason:spam</code> — optional reason is stored in audit logs.</div>
+          <button class="copy-btn" data-cmd="/ban user:@User reason:spam">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/kick</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Remove a member without banning them.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/kick user:@User reason:breaking rules</code></div>
+          <button class="copy-btn" data-cmd="/kick user:@User">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/timeout</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Temporarily mute a member (Discord timeout).</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/timeout user:@User duration:10m reason:spam</code> — use m/h/d for time.</div>
+          <button class="copy-btn" data-cmd="/timeout user:@User duration:10m">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/warn</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Issue a formal warning to a member.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/warn user:@User reason:inappropriate language</code></div>
+          <button class="copy-btn" data-cmd="/warn user:@User reason:">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/purge</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Bulk-delete recent messages in a channel.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/purge amount:50</code> — max depends on Discord limits (usually up to 100).</div>
+          <button class="copy-btn" data-cmd="/purge amount:50">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/lock</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Lock a channel so members cannot send messages.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/lock channel:#general</code> — unlock the same way when ready.</div>
+          <button class="copy-btn" data-cmd="/lock channel:#general">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="moderation">
+          <div class="cmd-top"><code>/slowmode</code><span class="cmd-cat">Moderation</span></div>
+          <p class="cmd-desc">Set slowmode delay on a channel.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/slowmode channel:#chat seconds:10</code></div>
+          <button class="copy-btn" data-cmd="/slowmode seconds:10">Copy</button>
+        </article>
+
+        <!-- TICKETS -->
+        <article class="cmd-card reveal" data-cat="tickets">
+          <div class="cmd-top"><code>/ticket setup</code><span class="cmd-cat">Tickets</span></div>
+          <p class="cmd-desc">Create a support ticket panel with buttons.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/ticket setup name:Support</code> — post the panel in a channel members can see.</div>
+          <button class="copy-btn" data-cmd="/ticket setup name:Support">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="tickets">
+          <div class="cmd-top"><code>/ticket close</code><span class="cmd-cat">Tickets</span></div>
+          <p class="cmd-desc">Close the current ticket channel.</p>
+          <div class="cmd-how"><strong>How to use</strong>Run inside a ticket channel: <code>/ticket close</code>. Staff can add a reason if prompted.</div>
+          <button class="copy-btn" data-cmd="/ticket close">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="tickets">
+          <div class="cmd-top"><code>/ticket add</code><span class="cmd-cat">Tickets</span></div>
+          <p class="cmd-desc">Add a user to an existing ticket.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/ticket add user:@User</code> inside the ticket channel.</div>
+          <button class="copy-btn" data-cmd="/ticket add user:@User">Copy</button>
+        </article>
+
+        <!-- ECONOMY -->
+        <article class="cmd-card reveal" data-cat="economy">
+          <div class="cmd-top"><code>/balance</code><span class="cmd-cat">Economy</span></div>
+          <p class="cmd-desc">Check your coin balance (or another member’s).</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/balance</code> or <code>/balance user:@User</code></div>
+          <button class="copy-btn" data-cmd="/balance">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="economy">
+          <div class="cmd-top"><code>/daily</code><span class="cmd-cat">Economy</span></div>
+          <p class="cmd-desc">Claim your daily coin reward.</p>
+          <div class="cmd-how"><strong>How to use</strong>Type <code>/daily</code> once every 24 hours. Streaks may boost the reward.</div>
+          <button class="copy-btn" data-cmd="/daily">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="economy">
+          <div class="cmd-top"><code>/rank</code><span class="cmd-cat">Economy</span></div>
+          <p class="cmd-desc">Show your level card and XP progress.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/rank</code> or <code>/rank user:@User</code> — levels rise from chat activity.</div>
+          <button class="copy-btn" data-cmd="/rank">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="economy">
+          <div class="cmd-top"><code>/leaderboard</code><span class="cmd-cat">Economy</span></div>
+          <p class="cmd-desc">View top members by coins or levels.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/leaderboard</code> — switch between economy and levels if the bot offers tabs.</div>
+          <button class="copy-btn" data-cmd="/leaderboard">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="economy">
+          <div class="cmd-top"><code>/pay</code><span class="cmd-cat">Economy</span></div>
+          <p class="cmd-desc">Send coins to another member.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/pay user:@User amount:100</code></div>
+          <button class="copy-btn" data-cmd="/pay user:@User amount:100">Copy</button>
+        </article>
+
+        <!-- UTILITY -->
+        <article class="cmd-card reveal" data-cat="utility">
+          <div class="cmd-top"><code>/embed</code><span class="cmd-cat">Utility</span></div>
+          <p class="cmd-desc">Open the live embed builder.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/embed</code> — set title, description, color, image, then send to a channel.</div>
+          <button class="copy-btn" data-cmd="/embed">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="utility">
+          <div class="cmd-top"><code>/dashboard</code><span class="cmd-cat">Utility</span></div>
+          <p class="cmd-desc">Open the in-Discord control dashboard.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/dashboard</code> — manage modules and settings from panels.</div>
+          <button class="copy-btn" data-cmd="/dashboard">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="utility">
+          <div class="cmd-top"><code>/help</code><span class="cmd-cat">Utility</span></div>
+          <p class="cmd-desc">List commands or get help for a specific one.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/help</code> or <code>/help command:music</code></div>
+          <button class="copy-btn" data-cmd="/help">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="utility">
+          <div class="cmd-top"><code>/userinfo</code><span class="cmd-cat">Utility</span></div>
+          <p class="cmd-desc">Show info about a user (join date, roles, ID).</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/userinfo user:@User</code></div>
+          <button class="copy-btn" data-cmd="/userinfo user:@User">Copy</button>
+        </article>
+        <article class="cmd-card reveal" data-cat="utility">
+          <div class="cmd-top"><code>/serverinfo</code><span class="cmd-cat">Utility</span></div>
+          <p class="cmd-desc">Show stats about the current server.</p>
+          <div class="cmd-how"><strong>How to use</strong><code>/serverinfo</code></div>
+          <button class="copy-btn" data-cmd="/serverinfo">Copy</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="cta-box reveal">
+        <img src="logo.png" alt="" class="cta-logo" width="52" height="52" />
+        <h2>Ready to try them?</h2>
+        <p>Invite Vortexia and type / in any channel.</p>
+        <div class="cta-btns">
+          <a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-secondary press">Add to Discord →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="./" class="footer-logo-link"><img src="logo.png" alt="" class="footer-logo-img" width="42" height="42" /><span class="footer-logo">VORTEXIA</span></a>
+        <p>The free all-in-one Discord bot.</p>
+      </div>
+      <div class="footer-col"><span class="footer-label">EXPLORE</span><a href="features.html">Features</a><a href="commands.html">Commands</a><a href="reviews.html">Reviews</a><a href="about.html">About</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><span class="footer-label">LINKS</span><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener">Invite bot</a><a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Support server</a></div>
+      <div class="footer-col">
+        <span class="footer-label">VORTEXIA BOT</span>
+        <a href="vortexia-bot.html">Vortexia Bot</a>
+        <a href="music-bot.html">Music bot</a>
+        <a href="moderation-bot.html">Moderation bot</a>
+        <a href="ticket-bot.html">Ticket bot</a>
+        <a href="economy-bot.html">Economy bot</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 VORTEXIA · NOT AFFILIATED WITH DISCORD</div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

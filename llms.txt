@@ -1,0 +1,20 @@
+# Vortexia Bot
+
+> Vortexia Bot (also known as Vortexia Discord Bot or Vortexia) is a free all-in-one Discord bot. It provides Lavalink music bot features, moderation tools, ticket system, economy, levels, embed builder and utility commands.
+
+Official website: https://vortexia.run.place/
+
+- [Vortexia Bot overview](https://vortexia.run.place/vortexia-bot.html)
+- [Features](https://vortexia.run.place/features.html)
+- [Commands](https://vortexia.run.place/commands.html)
+- [Music bot](https://vortexia.run.place/music-bot.html)
+- [Moderation bot](https://vortexia.run.place/moderation-bot.html)
+- [Ticket bot](https://vortexia.run.place/ticket-bot.html)
+- [Economy & levels bot](https://vortexia.run.place/economy-bot.html)
+- [FAQ](https://vortexia.run.place/faq.html)
+- [Reviews](https://vortexia.run.place/reviews.html)
+- [About](https://vortexia.run.place/about.html)
+- Invite: https://discord.com/oauth2/authorize?client_id=1205185289627115670
+- Support server: https://discord.gg/7RfWAKeAZZ
+
+Primary keywords: Vortexia Bot, Vortexia Discord Bot, free Discord bot, Discord music bot, Discord moderation bot.

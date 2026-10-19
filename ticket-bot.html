@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortexia Ticket Bot — Free Discord Ticket System</title>
+  <meta name="description" content="Set up a free Discord ticket system with Vortexia Bot. Button panels, private channels and staff tools for support." />
+  <meta name="keywords" content="Vortexia, Vortexia bot, Vortexia Discord bot, Discord music bot, free Discord bot, Discord moderation bot, Discord ticket bot, Discord economy bot" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#FF4D00" />
+  <link rel="canonical" href="https://vortexia.run.place/ticket-bot.html" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:site_name" content="Vortexia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vortexia Ticket Bot — Free Discord Ticket System" />
+  <meta property="og:description" content="Set up a free Discord ticket system with Vortexia Bot. Button panels, private channels and staff tools for support." />
+  <meta property="og:url" content="https://vortexia.run.place/ticket-bot.html" />
+  <meta property="og:image" content="https://vortexia.run.place/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Vortexia Discord Bot" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vortexia Ticket Bot — Free Discord Ticket System" />
+  <meta name="twitter:description" content="Set up a free Discord ticket system with Vortexia Bot. Button panels, private channels and staff tools for support." />
+  <meta name="twitter:image" content="https://vortexia.run.place/og-image.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Vortexia Ticket Bot — Free Discord Ticket System", "url": "https://vortexia.run.place/ticket-bot.html", "description": "Free Discord ticket bot from Vortexia: post a button panel with /ticket setup, members open private support channels, staff add users and close tickets.", "isPartOf": {"@type": "WebSite", "name": "Vortexia", "url": "https://vortexia.run.place/"}, "dateModified": "2026-10-19", "primaryImageOfPage": "https://vortexia.run.place/og-image.png"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vortexia.run.place/"}, {"@type": "ListItem", "position": 2, "name": "Ticket Bot", "item": "https://vortexia.run.place/ticket-bot.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the Vortexia ticket bot free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, tickets are part of the free core features."}}, {"@type": "Question", "name": "How do I create a ticket panel?", "acceptedAnswer": {"@type": "Answer", "text": "Run /ticket setup in the channel where you want the panel."}}, {"@type": "Question", "name": "Can staff add someone to a ticket?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, use /ticket add user:@User inside the ticket channel."}}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="logo-link"><img src="logo.png" alt="Vortexia Bot logo" class="logo-img" width="40" height="40" decoding="async" /><span>VORTEXIA</span></a>
+      <nav class="nav-desktop" aria-label="Main">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="commands.html" class="nav-link">Commands</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-primary btn-header press">Add to Discord</a>
+      <button class="menu-btn press" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" type="button">MENU</button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <div class="mobile-logo"><img src="logo.png" alt="" width="44" height="44" /><span>VORTEXIA</span></div>
+    <a href="features.html" class="mobile-link">Features</a>
+    <a href="commands.html" class="mobile-link">Commands</a>
+    <a href="reviews.html" class="mobile-link">Reviews</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="faq.html" class="mobile-link">FAQ</a>
+    <a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-primary press">Add to Discord</a>
+  </div>
+
+  <main id="main">
+    <section class="page-hero"><div class="hero-bg"></div>
+      <div class="page-hero-inner reveal"><span class="badge">TICKET BOT</span>
+        <h1 class="page-title">FREE DISCORD<br><span style="color:var(--primary)">TICKET BOT.</span></h1><p class="page-lead">Give members a clean way to get help. Vortexia Bot's ticket system uses button panels and private channels — no DM spam.</p>
+        <div class="hero-cta" style="margin-top:1.5rem"><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-primary press">Add Vortexia Bot →</a><a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener" class="btn btn-ghost press">Support Server</a></div>
+      </div></section>
+    <section class="section seo-sec" style="padding-top:1rem"><div class="intro-box reveal"><h2>How the Vortexia ticket system works</h2><p>Run <code>/ticket setup</code> to post a panel. Members click the button to open a private ticket channel; staff reply, add users and close the ticket when done.</p></div></section>
+    <section class="section seo-sec" style="padding-top:1rem"><div class="intro-box reveal"><h2>Ticket commands</h2><ul class="seo-list"><li><code>/ticket setup</code> (optionally with <code>name:Support</code>)</li><li><code>/ticket add user:@User</code></li><li><code>/ticket close</code></li></ul></div></section>
+    <section class="section seo-sec" style="padding-top:1rem"><div class="intro-box reveal"><h2>Set up tickets</h2><ol class="seo-list"><li><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener">Add Vortexia Bot</a>.</li><li>Choose the channel for your support panel and run <code>/ticket setup</code>.</li><li>Members click the button to open a ticket.</li></ol></div></section>
+    <section class="section" style="padding-top:1rem"><div class="intro-box"><h2>FAQ</h2><div class="faq-list" style="margin-top:1rem"><details class="faq-item"><summary>Is the Vortexia ticket bot free?</summary><p>Yes, tickets are part of the free core features.</p></details><details class="faq-item"><summary>How do I create a ticket panel?</summary><p>Run /ticket setup in the channel where you want the panel.</p></details><details class="faq-item"><summary>Can staff add someone to a ticket?</summary><p>Yes, use /ticket add user:@User inside the ticket channel.</p></details></div></div></section>
+    <section class="section" style="padding-top:0"><div class="intro-box"><h2>More from Vortexia Bot</h2><div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem"><a class="btn btn-ghost press" style="font-size:.75rem" href="vortexia-bot.html">Vortexia Bot</a> <a class="btn btn-ghost press" style="font-size:.75rem" href="music-bot.html">Music Bot</a> <a class="btn btn-ghost press" style="font-size:.75rem" href="moderation-bot.html">Moderation Bot</a> <a class="btn btn-ghost press" style="font-size:.75rem" href="economy-bot.html">Economy &amp; Levels Bot</a> </div></div></section>
+    <section class="section cta"><div class="cta-box reveal"><img src="logo.png" alt="Vortexia Bot logo" class="cta-logo" width="52" height="52" /><h2>Add Vortexia Bot<br>to your server.</h2><p>Free. One invite. Every tool.</p>
+      <div class="cta-btns"><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-secondary press">Add to Discord →</a><a href="commands.html" class="btn btn-ghost press">See commands</a></div></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="./" class="footer-logo-link"><img src="logo.png" alt="" class="footer-logo-img" width="42" height="42" /><span class="footer-logo">VORTEXIA</span></a>
+        <p>The free all-in-one Discord bot.</p>
+      </div>
+      <div class="footer-col"><span class="footer-label">EXPLORE</span><a href="features.html">Features</a><a href="commands.html">Commands</a><a href="reviews.html">Reviews</a><a href="about.html">About</a><a href="faq.html">FAQ</a></div>
+      <div class="footer-col"><span class="footer-label">LINKS</span><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener">Invite bot</a><a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Support server</a></div>
+      <div class="footer-col">
+        <span class="footer-label">VORTEXIA BOT</span>
+        <a href="vortexia-bot.html">Vortexia Bot</a>
+        <a href="music-bot.html">Music bot</a>
+        <a href="moderation-bot.html">Moderation bot</a>
+        <a href="ticket-bot.html">Ticket bot</a>
+        <a href="economy-bot.html">Economy bot</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 VORTEXIA · NOT AFFILIATED WITH DISCORD</div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
