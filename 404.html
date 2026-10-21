@@ -6,12 +6,12 @@
   <title>Page not found — Vortexia Bot</title>
   <meta name="description" content="This page does not exist. Return to the Vortexia Bot homepage for the free Discord music, moderation and ticket bot." />
   <meta name="robots" content="noindex, follow" />
-  <meta name="theme-color" content="#FF4D00" />
+  <meta name="theme-color" content="#FF6A00" />
   <link rel="canonical" href="https://vortexia.run.place/404.html" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
-  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta property="og:site_name" content="Vortexia" />
   <meta property="og:type" content="website" />
@@ -26,12 +26,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<script>
+(function(){
+  try {
+    var a = localStorage.getItem("vortexia_auth_v1");
+    if (!a || a === "null") document.documentElement.classList.add("gate-pending");
+  } catch(e) { document.documentElement.classList.add("gate-pending"); }
+})();
+</script>
+<style>
+html.gate-pending body > *:not(script):not(#siteGate) { visibility: hidden !important; }
+html.gate-pending #siteGate { visibility: visible !important; }
+html.gate-pending body::before {
+  content: "";
+  position: fixed; inset: 0; z-index: 499;
+  background: #0B0B0F;
+}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="logo-link"><img src="/logo.png" alt="Vortexia Bot logo" class="logo-img" width="40" height="40" decoding="async" /><span>VORTEXIA</span></a>
+      <a href="/" class="logo-link"><img src="logo.png" alt="Vortexia Bot logo" class="logo-img" width="40" height="40" decoding="async"  onerror="this.onerror=null;this.src='icon-192.png'"><span>VORTEXIA</span></a>
       <nav class="nav-desktop" aria-label="Main">
         <a href="/features.html" class="nav-link">Features</a>
         <a href="/commands.html" class="nav-link">Commands</a>
@@ -44,7 +61,7 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobileMenu" hidden>
-    <div class="mobile-logo"><img src="/logo.png" alt="" width="44" height="44" /><span>VORTEXIA</span></div>
+    <div class="mobile-logo"><img src="logo.png" alt="" width="44" height="44"  onerror="this.onerror=null;this.src='icon-192.png'"><span>VORTEXIA</span></div>
     <a href="/features.html" class="mobile-link">Features</a>
     <a href="/commands.html" class="mobile-link">Commands</a>
     <a href="/reviews.html" class="mobile-link">Reviews</a>
@@ -73,7 +90,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="/" class="footer-logo-link"><img src="/logo.png" alt="" class="footer-logo-img" width="42" height="42" /><span class="footer-logo">VORTEXIA</span></a>
+        <a href="/" class="footer-logo-link"><img src="logo.png" alt="" class="footer-logo-img" width="42" height="42"  onerror="this.onerror=null;this.src='icon-192.png'"><span class="footer-logo">VORTEXIA</span></a>
         <p>Free all-in-one Discord bot.</p>
       </div>
       <div class="footer-col"><span class="footer-label">EXPLORE</span><a href="/features.html">Features</a><a href="/commands.html">Commands</a><a href="/reviews.html">Reviews</a><a href="/about.html">About</a><a href="/faq.html">FAQ</a></div>

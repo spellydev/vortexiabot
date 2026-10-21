@@ -7,7 +7,7 @@
   <meta name="description" content="Vortexia is a powerful free Lavalink Discord music bot with high quality audio, filters, lyrics, 24/7 mode and queue system." />
   <meta name="keywords" content="Vortexia, Vortexia bot, Vortexia Discord bot, Discord music bot, free Discord bot, Discord moderation bot, Discord ticket bot, Discord economy bot" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <meta name="theme-color" content="#FF4D00" />
+  <meta name="theme-color" content="#FF6A00" />
   <link rel="canonical" href="https://vortexia.run.place/music-bot.html" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48" />
@@ -33,12 +33,29 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Vortexia Music Bot — Free 24/7 Lavalink Discord Music Bot", "url": "https://vortexia.run.place/music-bot.html", "description": "Vortexia Bot's free Discord music bot: Lavalink playback, queue, audio filters, lyrics, loop modes and 24/7 voice mode controlled from one /music panel.", "isPartOf": {"@type": "WebSite", "name": "Vortexia", "url": "https://vortexia.run.place/"}, "dateModified": "2026-10-19", "primaryImageOfPage": "https://vortexia.run.place/og-image.png"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vortexia.run.place/"}, {"@type": "ListItem", "position": 2, "name": "Music Bot", "item": "https://vortexia.run.place/music-bot.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the Vortexia music bot free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the music module is part of the free core features."}}, {"@type": "Question", "name": "Does Vortexia music work 24/7?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enable 24/7 mode so Vortexia stays in the voice channel even when the queue is empty or members leave."}}, {"@type": "Question", "name": "Which command starts the music player?", "acceptedAnswer": {"@type": "Answer", "text": "Join a voice channel and run /music to open the player panel, or use /play to queue a track."}}]}</script>
+<script>
+(function(){
+  try {
+    var a = localStorage.getItem("vortexia_auth_v1");
+    if (!a || a === "null") document.documentElement.classList.add("gate-pending");
+  } catch(e) { document.documentElement.classList.add("gate-pending"); }
+})();
+</script>
+<style>
+html.gate-pending body > *:not(script):not(#siteGate) { visibility: hidden !important; }
+html.gate-pending #siteGate { visibility: visible !important; }
+html.gate-pending body::before {
+  content: "";
+  position: fixed; inset: 0; z-index: 499;
+  background: #0B0B0F;
+}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a href="./" class="logo-link"><img src="logo.png" alt="Vortexia Bot logo" class="logo-img" width="40" height="40" decoding="async" /><span>VORTEXIA</span></a>
+      <a href="./" class="logo-link"><img src="logo.png" alt="Vortexia Bot logo" class="logo-img" width="40" height="40" decoding="async"  onerror="this.onerror=null;this.src='icon-192.png'"><span>VORTEXIA</span></a>
       <nav class="nav-desktop" aria-label="Main">
         <a href="features.html" class="nav-link">Features</a>
         <a href="commands.html" class="nav-link">Commands</a>
@@ -51,7 +68,7 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobileMenu" hidden>
-    <div class="mobile-logo"><img src="logo.png" alt="" width="44" height="44" /><span>VORTEXIA</span></div>
+    <div class="mobile-logo"><img src="logo.png" alt="" width="44" height="44"  onerror="this.onerror=null;this.src='icon-192.png'"><span>VORTEXIA</span></div>
     <a href="features.html" class="mobile-link">Features</a>
     <a href="commands.html" class="mobile-link">Commands</a>
     <a href="reviews.html" class="mobile-link">Reviews</a>
@@ -71,14 +88,14 @@
     <section class="section seo-sec" style="padding-top:1rem"><div class="intro-box reveal"><h2>Set up music in 3 steps</h2><ol class="seo-list"><li><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener">Add Vortexia Bot</a> to your server.</li><li>Join a voice channel.</li><li>Run <code>/music</code> or <code>/play</code> and enjoy. Turn on <code>/247</code> for round-the-clock presence.</li></ol></div></section>
     <section class="section" style="padding-top:1rem"><div class="intro-box"><h2>FAQ</h2><div class="faq-list" style="margin-top:1rem"><details class="faq-item"><summary>Is the Vortexia music bot free?</summary><p>Yes, the music module is part of the free core features.</p></details><details class="faq-item"><summary>Does Vortexia music work 24/7?</summary><p>Yes. Enable 24/7 mode so Vortexia stays in the voice channel even when the queue is empty or members leave.</p></details><details class="faq-item"><summary>Which command starts the music player?</summary><p>Join a voice channel and run /music to open the player panel, or use /play to queue a track.</p></details></div></div></section>
     <section class="section" style="padding-top:0"><div class="intro-box"><h2>More from Vortexia Bot</h2><div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem"><a class="btn btn-ghost press" style="font-size:.75rem" href="vortexia-bot.html">Vortexia Bot</a> <a class="btn btn-ghost press" style="font-size:.75rem" href="moderation-bot.html">Moderation Bot</a> <a class="btn btn-ghost press" style="font-size:.75rem" href="ticket-bot.html">Ticket Bot</a> <a class="btn btn-ghost press" style="font-size:.75rem" href="economy-bot.html">Economy &amp; Levels Bot</a> </div></div></section>
-    <section class="section cta"><div class="cta-box reveal"><img src="logo.png" alt="Vortexia Bot logo" class="cta-logo" width="52" height="52" /><h2>Add Vortexia Bot<br>to your server.</h2><p>Free. One invite. Every tool.</p>
+    <section class="section cta"><div class="cta-box reveal"><img src="logo.png" alt="Vortexia Bot logo" class="cta-logo" width="52" height="52"  onerror="this.onerror=null;this.src='icon-192.png'"><h2>Add Vortexia Bot<br>to your server.</h2><p>Free. One invite. Every tool.</p>
       <div class="cta-btns"><a href="https://discord.com/oauth2/authorize?client_id=1205185289627115670" target="_blank" rel="noopener" class="btn btn-secondary press">Add to Discord →</a><a href="commands.html" class="btn btn-ghost press">See commands</a></div></div></section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="./" class="footer-logo-link"><img src="logo.png" alt="" class="footer-logo-img" width="42" height="42" /><span class="footer-logo">VORTEXIA</span></a>
+        <a href="./" class="footer-logo-link"><img src="logo.png" alt="" class="footer-logo-img" width="42" height="42"  onerror="this.onerror=null;this.src='icon-192.png'"><span class="footer-logo">VORTEXIA</span></a>
         <p>The free all-in-one Discord bot.</p>
       </div>
       <div class="footer-col"><span class="footer-label">EXPLORE</span><a href="features.html">Features</a><a href="commands.html">Commands</a><a href="reviews.html">Reviews</a><a href="about.html">About</a><a href="faq.html">FAQ</a></div>
