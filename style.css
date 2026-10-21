@@ -88,23 +88,10 @@ code { font-family: var(--font-m); font-size: 0.9em; }
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   min-height: var(--header-h);
 }
-.logo-link {
-  display: flex; align-items: center; gap: 0.65rem;
-  font-family: var(--font-d); font-size: 1.15rem; text-transform: uppercase;
-  letter-spacing: 0.02em; flex-shrink: 0; z-index: 2;
-}
-.logo-img, .logo-link img, .mobile-logo img, .footer-logo-img, .cta-logo, .auth-avatar img {
-  width: 40px; height: 40px; border-radius: 11px; object-fit: cover; object-position: center;
-  flex-shrink: 0; background: var(--muted); border: 1px solid rgba(255, 106, 0, 0.25);
-  transition: transform 0.4s var(--ease-bounce), box-shadow 0.3s;
-}
-.logo-link:hover .logo-img {
-  transform: rotate(-10deg) scale(1.1); box-shadow: 0 0 20px var(--primary-glow);
-}
-.logo-link span {
-  background: linear-gradient(135deg, #fff 30%, var(--primary));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+
+
+
+
 .nav-desktop { display: none; gap: 0.15rem; align-items: center; }
 .nav-link {
   font-family: var(--font-m); font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
@@ -645,3 +632,96 @@ body.gate-locked #siteGate { visibility: visible !important; pointer-events: aut
 
 .discord-btn { display: inline-flex !important; align-items: center; justify-content: center; gap: 0.55rem; }
 .discord-btn svg { width: 20px; height: 20px; }
+
+.mock-channel { margin-left: auto; font-size: 0.75rem; color: #B5BAC1; font-weight: 600; }
+.music-panel .track-title { color: #F2F3F5; font-weight: 600; margin: 0.35rem 0 0.5rem; font-size: 0.88rem; }
+.track-bar {
+  height: 6px; background: #1E1F22; border-radius: 99px; overflow: hidden; margin-bottom: 0.4rem;
+}
+.track-fill {
+  display: block; height: 100%; width: 42%;
+  background: linear-gradient(90deg, #FF6A00, #FFB347);
+  border-radius: 99px;
+  animation: progress-pulse 2.5s ease-in-out infinite;
+}
+@keyframes progress-pulse {
+  0%, 100% { width: 40%; }
+  50% { width: 48%; }
+}
+.track-meta { font-size: 0.72rem; color: #949BA4; margin-bottom: 0.65rem; }
+.music-controls {
+  display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;
+}
+.music-controls span {
+  width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;
+  background: #1E1F22; border-radius: 8px; font-size: 0.85rem; cursor: default;
+}
+.music-controls .play-main {
+  background: #FF6A00; color: #0A0A0A; width: 36px; height: 36px; font-weight: 700;
+  box-shadow: 0 0 16px rgba(255, 106, 0, 0.4);
+}
+
+.cmd-kind-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; justify-content: center; }
+.cmd-count { text-align: center; color: var(--ink-muted); font-size: 0.85rem; margin-bottom: 1rem; font-family: var(--font-m); }
+
+
+/* === Logo always visible === */
+.logo-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-d);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  z-index: 5;
+  min-width: 0;
+}
+.logo-img,
+.logo-link img,
+.mobile-logo img,
+.footer-logo-img,
+.cta-logo,
+.gate-logo,
+.avatar.logo img {
+  display: block !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 11px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  flex-shrink: 0 !important;
+  background: #1a1410 !important;
+  border: 1px solid rgba(255, 106, 0, 0.4) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  image-rendering: -webkit-optimize-contrast;
+}
+.mobile-logo img { width: 48px !important; height: 48px !important; min-width: 48px !important; min-height: 48px !important; border-radius: 12px !important; }
+.footer-logo-img { width: 42px !important; height: 42px !important; min-width: 42px !important; min-height: 42px !important; }
+.cta-logo { width: 56px !important; height: 56px !important; min-width: 56px !important; min-height: 56px !important; border-radius: 14px !important; margin: 0 auto 1rem; }
+.gate-logo { width: 72px !important; height: 72px !important; min-width: 72px !important; min-height: 72px !important; border-radius: 18px !important; margin: 0 auto 1.25rem; }
+.avatar.logo img { width: 100% !important; height: 100% !important; min-width: 0 !important; min-height: 0 !important; border-radius: 10px !important; }
+.logo-link:hover .logo-img {
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+.logo-link span {
+  background: linear-gradient(135deg, #fff 30%, var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.footer-logo-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.seo-foot {
+  max-width: 1180px; margin: 0.5rem auto 0; padding: 0 1.25rem 1rem;
+  font-size: 0.7rem; color: var(--ink-muted); text-align: center; opacity: 0.7;
+}

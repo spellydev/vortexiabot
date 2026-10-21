@@ -152,7 +152,7 @@
     var gateCard = document.querySelector(".site-gate-card");
     if (gateCard) {
       gateCard.innerHTML =
-        '<img src="logo.png" alt="" class="gate-logo" width="72" height="72" onerror="this.src=\'icon-192.png\'" />' +
+        '<img src="./logo.png" alt="" class="gate-logo" width="72" height="72" onerror="this.src=\'./icon-192.png\'" />' +
         "<h1>Signing in…</h1><p>Connecting to Discord, please wait.</p>";
     }
 
@@ -216,7 +216,7 @@
     gate.setAttribute("aria-labelledby", "gateTitle");
     gate.innerHTML =
       '<div class="site-gate-card">' +
-      '<img src="logo.png" alt="Vortexia" class="gate-logo" width="72" height="72" onerror="this.onerror=null;this.src=\'icon-192.png\'" />' +
+      '<img src="./logo.png" alt="Vortexia" class="gate-logo" width="72" height="72" onerror="this.onerror=null;this.src=\'./icon-192.png\'" />' +
       '<h1 id="gateTitle">Welcome to <span>Vortexia</span></h1>' +
       "<p>Sign in with Discord to visit this website and leave reviews.</p>" +
       '<button type="button" class="btn discord-btn press" id="gateDiscord">' +
@@ -274,25 +274,28 @@
   }
 
   function fixLogos() {
-    document
-      .querySelectorAll(
-        "img.logo-img, .logo-link img, .mobile-logo img, .footer-logo-img, .cta-logo, .avatar.logo img, .gate-logo"
-      )
-      .forEach(function (img) {
-        img.addEventListener("error", function onErr() {
-          this.removeEventListener("error", onErr);
-          var tryList = ["logo.png", "./logo.png", "icon-192.png", "./icon-192.png"];
-          var cur = this.getAttribute("src") || "";
-          var next = tryList.find(function (p) {
-            return p !== cur;
-          });
-          if (next) this.src = next;
-        });
-        var src = img.getAttribute("src") || "";
-        if (src.indexOf("/logo") === 0 || src.indexOf("/icon") === 0) {
-          img.setAttribute("src", src.slice(1));
-        }
-      });
+    var fallbacks = ["./logo.png", "logo.png", "./icon-192.png", "icon-192.png", "./icon-512.png"];
+    document.querySelectorAll("img").forEach(function (img) {
+      var src = (img.getAttribute("src") || "").toLowerCase();
+      if (src.indexOf("logo") === -1 && src.indexOf("icon-") === -1 && img.className.indexOf("logo") === -1) {
+        /* still fix gate / cta by class */
+        if (!/(logo-img|footer-logo|cta-logo|gate-logo)/.test(img.className)) return;
+      }
+      img.style.display = "block";
+      img.style.opacity = "1";
+      img.style.visibility = "visible";
+      img.setAttribute("decoding", "async");
+      if (!img.getAttribute("width")) img.setAttribute("width", "40");
+      if (!img.getAttribute("height")) img.setAttribute("height", "40");
+      /* normalize path */
+      if (src === "logo.png" || src === "/logo.png") img.setAttribute("src", "./logo.png");
+      img.onerror = function () {
+        var cur = this.getAttribute("src") || "";
+        var i = fallbacks.indexOf(cur);
+        var next = fallbacks[i + 1] || fallbacks[fallbacks.length - 1];
+        if (next && next !== cur) this.src = next;
+      };
+    });
   }
 
   function initParticles() {
@@ -407,6 +410,35 @@
   }
 
   function initCommands() {
+
+    document.querySelectorAll(".cmd-kind-row .filter-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll(".cmd-kind-row .filter-btn").forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        applyCmdFilters();
+      });
+    });
+    function applyCmdFilters() {
+      var catBtn = document.querySelector(".cmd-filters .filter-btn.active");
+      var kindBtn = document.querySelector(".cmd-kind-row .filter-btn.active");
+      var cat = catBtn ? catBtn.dataset.filter : "all";
+      var kind = kindBtn ? kindBtn.dataset.kind : "all";
+      var search = document.getElementById("cmdSearch");
+      var q = search ? search.value.trim().toLowerCase() : "";
+      var n = 0;
+      document.querySelectorAll(".cmd-card").forEach(function (c) {
+        var catOk = cat === "all" || c.dataset.cat === cat;
+        var kindOk = kind === "all" || c.dataset.kind === kind;
+        var textOk = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
+        var show = catOk && kindOk && textOk;
+        c.classList.toggle("hidden", !show);
+        if (show) n++;
+      });
+      var countEl = document.getElementById("cmdCount");
+      if (countEl) countEl.textContent = n + " commands shown";
+    }
+    window.__vxApplyCmdFilters = applyCmdFilters;
+
     var filters = document.querySelectorAll(".filter-btn");
     var cards = document.querySelectorAll(".cmd-card");
     filters.forEach(function (btn) {
@@ -415,6 +447,7 @@
           b.classList.remove("active");
         });
         btn.classList.add("active");
+        if (window.__vxApplyCmdFilters) { window.__vxApplyCmdFilters(); return; }
         var cat = btn.dataset.filter || "all";
         var search = document.getElementById("cmdSearch");
         var q = search ? search.value.trim().toLowerCase() : "";
@@ -428,6 +461,7 @@
     var search = document.getElementById("cmdSearch");
     if (search) {
       search.addEventListener("input", function () {
+        if (window.__vxApplyCmdFilters) { window.__vxApplyCmdFilters(); return; }
         var q = search.value.trim().toLowerCase();
         var catBtn = document.querySelector(".filter-btn.active");
         var cat = catBtn ? catBtn.dataset.filter : "all";

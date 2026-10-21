@@ -1,5 +1,15 @@
+# Vortexia Bot — https://vortexia.run.place
 User-agent: *
 Allow: /
-Disallow: /404.html
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://vortexia.run.place/sitemap.xml
+Host: vortexia.run.place
