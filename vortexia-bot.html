@@ -11,9 +11,10 @@
   <meta name="googlebot" content="index, follow" />
   <meta name="application-name" content="Vortexia Bot" />
   <meta name="apple-mobile-web-app-title" content="Vortexia Bot" />
-  <meta name="theme-color" content="#FF6A00" />
+  <meta name="theme-color" content="#0B0B0F" />
+  <meta name="color-scheme" content="dark" />
   <meta name="msapplication-TileColor" content="#FF6A00" />
-  <meta name="msapplication-TileImage" content="https://vortexia.run.place/icon-192.png" />
+  <meta name="msapplication-TileImage" content="https://vortexia.run.place/icon-192.png?v=2" />
   <link rel="canonical" href="https://vortexia.run.place/vortexia-bot.html" />
   <link rel="alternate" hreflang="en" href="https://vortexia.run.place/vortexia-bot.html" />
   <link rel="alternate" hreflang="x-default" href="https://vortexia.run.place/" />
@@ -38,14 +39,15 @@
   <meta name="twitter:image:alt" content="Vortexia Bot logo and branding" />
 
   <!-- Favicons (absolute URLs help Google) -->
-  <link rel="icon" href="https://vortexia.run.place/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="48x48" href="https://vortexia.run.place/favicon-48.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="https://vortexia.run.place/favicon-96.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="https://vortexia.run.place/icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="https://vortexia.run.place/icon-512.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://vortexia.run.place/apple-touch-icon.png" />
+  <link rel="icon" href="https://vortexia.run.place/favicon.ico?v=2" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="https://vortexia.run.place/favicon-48.png?v=2" />
+  <link rel="icon" type="image/png" sizes="144x144" href="https://vortexia.run.place/favicon-144.png?v=2" />
+  <link rel="icon" type="image/png" sizes="96x96" href="https://vortexia.run.place/favicon-96.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://vortexia.run.place/icon-192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="512x512" href="https://vortexia.run.place/icon-512.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://vortexia.run.place/apple-touch-icon.png?v=2" />
   <link rel="manifest" href="https://vortexia.run.place/site.webmanifest" />
-  <link rel="shortcut icon" href="https://vortexia.run.place/favicon.ico" />
+  <link rel="shortcut icon" href="https://vortexia.run.place/favicon.ico?v=2" />
 
   <!-- JSON-LD: WebSite (Google site name = Vortexia Bot) -->
   <script type="application/ld+json">
@@ -63,7 +65,7 @@
       "url": "https://vortexia.run.place/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://vortexia.run.place/icon-512.png",
+        "url": "https://vortexia.run.place/icon-512.png?v=2",
         "width": 512,
         "height": 512
       }
@@ -83,7 +85,7 @@
     "name": "Vortexia Bot",
     "alternateName": ["Vortexia", "Vortexia Discord Bot"],
     "url": "https://vortexia.run.place/",
-    "logo": "https://vortexia.run.place/icon-512.png",
+    "logo": "https://vortexia.run.place/icon-512.png?v=2",
     "image": "https://vortexia.run.place/og-image.png",
     "sameAs": ["https://discord.gg/7RfWAKeAZZ"],
     "contactPoint": {
@@ -120,13 +122,6 @@
       "@type": "Organization",
       "name": "Vortexia Bot",
       "url": "https://vortexia.run.place/"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "128",
-      "bestRating": "5",
-      "worstRating": "1"
     }
   }
   </script>
@@ -142,9 +137,10 @@
 <script>
 (function(){
   try {
+    window.VX_GATE_REQUIRED = true; /* false = anyone can browse; login only for reviews */
     var a = localStorage.getItem("vortexia_auth_v1");
-    if (!a || a === "null") document.documentElement.classList.add("gate-pending");
-  } catch(e) { document.documentElement.classList.add("gate-pending"); }
+    if (window.VX_GATE_REQUIRED && (!a || a === "null")) document.documentElement.classList.add("gate-pending");
+  } catch(e) { if (window.VX_GATE_REQUIRED !== false) document.documentElement.classList.add("gate-pending"); }
 })();
 </script>
 <style>
@@ -166,7 +162,7 @@ html.gate-pending body::before {
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a href="./" class="logo-link"><img src="./logo.png" alt="Vortexia" class="logo-img" width="40" height="40" decoding="async" loading="eager" onerror="this.onerror=null;this.src='./icon-192.png'" /><span>VORTEXIA</span></a>
+      <a href="./" class="logo-link"><img src="./logo.png" alt="Vortexia" class="logo-img" width="40" height="40" decoding="async" loading="eager" onerror="this.onerror=null;this.src='./icon-192.png'" /><span><span>VORTEXIA</span></a>
       <nav class="nav-desktop" aria-label="Main">
         <a href="features.html" class="nav-link">Features</a>
         <a href="commands.html" class="nav-link">Commands</a>
@@ -179,7 +175,7 @@ html.gate-pending body::before {
     </div>
   </header>
   <div class="mobile-menu" id="mobileMenu" hidden>
-    <div class="mobile-logo"><img src="./logo.png" alt="" width="48" height="48" decoding="async" loading="eager" onerror="this.onerror=null;this.src='./icon-192.png'" /><span>VORTEXIA</span></div>
+    <div class="mobile-logo"><img src="./logo.png" alt="" width="48" height="48" decoding="async" loading="eager" onerror="this.onerror=null;this.src='./icon-192.png'" /><span><span>VORTEXIA</span></div>
     <a href="features.html" class="mobile-link">Features</a>
     <a href="commands.html" class="mobile-link">Commands</a>
     <a href="reviews.html" class="mobile-link">Reviews</a>
@@ -214,7 +210,7 @@ html.gate-pending body::before {
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="./" class="footer-logo-link"><img src="./logo.png" alt="" class="footer-logo-img" width="42" height="42" decoding="async" loading="lazy" onerror="this.onerror=null;this.src='./icon-192.png'" /><span class="footer-logo">VORTEXIA</span></a>
+        <a href="./" class="footer-logo-link"><img src="./logo.png" alt="" class="footer-logo-img" width="42" height="42" decoding="async" loading="lazy" onerror="this.onerror=null;this.src='./icon-192.png'" /><span class="footer-logo"><span>VORTEXIA</span></a>
         <p>The free all-in-one Discord bot.</p>
       </div>
       <div class="footer-col"><span class="footer-label">EXPLORE</span><a href="features.html">Features</a><a href="commands.html">Commands</a><a href="reviews.html">Reviews</a><a href="about.html">About</a><a href="faq.html">FAQ</a></div>

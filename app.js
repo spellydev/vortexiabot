@@ -233,6 +233,14 @@
 
   function applyGate() {
     var auth = getAuth();
+    if (window.VX_GATE_REQUIRED === false) {
+      document.documentElement.classList.remove("gate-pending");
+      document.body.classList.remove("gate-locked");
+      var g0 = document.getElementById("siteGate");
+      if (g0) g0.classList.add("hidden");
+      if (typeof window.__vxRenderReviewForm === "function") window.__vxRenderReviewForm();
+      return;
+    }
     var gate = ensureGate();
     if (auth) {
       gate.classList.add("hidden");

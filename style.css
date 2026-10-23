@@ -725,3 +725,12 @@ body.gate-locked #siteGate { visibility: visible !important; pointer-events: aut
   max-width: 1180px; margin: 0.5rem auto 0; padding: 0 1.25rem 1rem;
   font-size: 0.7rem; color: var(--ink-muted); text-align: center; opacity: 0.7;
 }
+
+/* a11y + polish */
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 3px solid #FF6A00; outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
