@@ -150,7 +150,7 @@
     var gateCard = document.querySelector(".site-gate-card");
     if (gateCard) {
       gateCard.innerHTML =
-        '<img src="./logo.png" alt="" class="gate-logo" width="72" height="72" onerror="this.src=\'./icon-192.png\'" />' +
+        '<img src="./logo.png?v=4" alt="" class="gate-logo" width="72" height="72" onerror="this.src=\'./icon-192.png?v=4\'" />' +
         "<h1>Signing in…</h1><p>Connecting to Discord, please wait.</p>";
     }
 
@@ -214,7 +214,7 @@
     gate.setAttribute("aria-labelledby", "gateTitle");
     gate.innerHTML =
       '<div class="site-gate-card">' +
-      '<img src="./logo.png" alt="Vortexia" class="gate-logo" width="72" height="72" onerror="this.onerror=null;this.src=\'./icon-192.png\'" />' +
+      '<img src="./logo.png?v=4" alt="Vortexia" class="gate-logo" width="72" height="72" onerror="this.onerror=null;this.src=\'./icon-192.png?v=4\'" />' +
       '<h1 id="gateTitle">Welcome to <span>Vortexia</span></h1>' +
       "<p>Sign in with Discord to visit this website and leave reviews.</p>" +
       '<button type="button" class="btn discord-btn press" id="gateDiscord">' +
@@ -280,7 +280,7 @@
   }
 
   function fixLogos() {
-    var fallbacks = ["./logo.png", "logo.png", "./icon-192.png", "icon-192.png", "./icon-512.png"];
+    var fallbacks = ["./logo.png?v=4", "logo.png", "./icon-192.png?v=4", "icon-192.png", "./icon-512.png?v=4"];
     document.querySelectorAll("img").forEach(function (img) {
       var src = (img.getAttribute("src") || "").toLowerCase();
       if (src.indexOf("logo") === -1 && src.indexOf("icon-") === -1 && img.className.indexOf("logo") === -1) {
@@ -294,7 +294,7 @@
       if (!img.getAttribute("width")) img.setAttribute("width", "40");
       if (!img.getAttribute("height")) img.setAttribute("height", "40");
       /* normalize path */
-      if (src === "logo.png" || src === "/logo.png") img.setAttribute("src", "./logo.png");
+      if (src === "logo.png" || src === "/logo.png") img.setAttribute("src", "./logo.png?v=4");
       img.onerror = function () {
         var cur = this.getAttribute("src") || "";
         var i = fallbacks.indexOf(cur);

@@ -161,7 +161,7 @@ code { font-family: var(--font-m); font-size: 0.9em; }
   .mobile-menu { display: none !important; }
 }
 
-.hero { position: relative; padding: 3.5rem 1.25rem 4rem; overflow: hidden; }
+.hero { position: relative; padding: 3.5rem 1.25rem 4rem; overflow-x: clip; overflow-y: visible; }
 .hero-bg {
   position: absolute; inset: 0;
   background-image:
@@ -217,13 +217,17 @@ code { font-family: var(--font-m); font-size: 0.9em; }
 .discord-mock {
   background: #1E1F22; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow), 0 0 60px rgba(255, 106, 0, 0.08); overflow: hidden;
-  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
-  transition: transform 0.5s var(--ease-out); animation: float-card 6s ease-in-out infinite;
+  transform: none;
+  transition: transform 0.5s var(--ease-out), box-shadow 0.35s;
+  animation: float-card-y 6s ease-in-out infinite;
 }
-.discord-mock:hover { transform: perspective(1000px) rotateY(0) rotateX(0) scale(1.02); }
+.discord-mock:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow), 0 0 80px rgba(255, 106, 0, 0.14);
+}
 @keyframes float-card {
-  0%, 100% { transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(0); }
-  50% { transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 .mock-header {
   display: flex; align-items: center; gap: 0.4rem; padding: 0.75rem 1rem;
@@ -738,26 +742,79 @@ html { scroll-behavior: smooth; }
 
 /* Responsive hero/music preview fixes (desktop + mobile) */
 .hero-inner, .hero-copy, .hero-visual, .discord-mock, .mock-msg, .msg-body, .music-panel { min-width: 0; max-width: 100%; }
-.hero-visual { width: 100%; }
-.discord-mock { width: 100%; box-sizing: border-box; transform: none; animation: float-card 6s ease-in-out infinite; }
-.mock-msg { align-items: flex-start; }
-.msg-body { flex: 1 1 auto; overflow-wrap: anywhere; }
-.music-panel { box-sizing: border-box; }
-.music-controls { gap: clamp(0.25rem, 1.4vw, 0.45rem); }
+.hero-visual { width: 100%; max-width: 100%; overflow: visible; }
+.discord-mock {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  transform: none !important;
+  animation: float-card-y 6s ease-in-out infinite;
+}
+@keyframes float-card-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.mock-msg { align-items: flex-start; width: 100%; }
+.msg-body { flex: 1 1 auto; min-width: 0; overflow-wrap: break-word; word-break: normal; }
+.music-panel { box-sizing: border-box; width: 100%; max-width: 100%; }
+.music-controls { gap: clamp(0.25rem, 1.4vw, 0.45rem); flex-wrap: wrap; }
 .music-controls span { flex: 0 0 32px; }
+
+/* Prevent mid-word break on SUPERCHARGED */
+.hero-title {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+.hero-title .accent {
+  display: inline;
+  white-space: nowrap;
+}
+
 @media (max-width: 959px) {
-  .hero { padding-top: 2.25rem; }
+  .hero { padding-top: 2.25rem; padding-bottom: 2.5rem; }
   .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
-  .hero-visual { overflow: hidden; }
-  .discord-mock { transform: none; animation: none; }
-  .hero-title { overflow-wrap: anywhere; font-size: clamp(2rem, 8vw, 3.25rem); }
+  .hero-visual { overflow: visible; width: 100%; }
+  .discord-mock {
+    transform: none !important;
+    animation: none;
+    margin: 0 auto;
+    max-width: 420px;
+  }
+  .hero-title {
+    font-size: clamp(1.85rem, 7.5vw, 3rem);
+    line-height: 1.1;
+  }
+  .hero-title .accent {
+    white-space: normal;
+    display: inline;
+  }
 }
 @media (max-width: 480px) {
+  .hero { padding-left: 1rem; padding-right: 1rem; }
   .mock-body { padding: 0.75rem; }
   .mock-msg { gap: 0.55rem; }
-  .mock-embed { padding: 0.6rem; font-size: 0.76rem; }
-  .music-controls { gap: 0.3rem; }
-  .music-controls span { width: 29px; height: 29px; flex-basis: 29px; }
-  .music-controls .play-main { width: 32px; height: 32px; flex-basis: 32px; }
-  .track-title { overflow-wrap: anywhere; }
+  .mock-embed { padding: 0.55rem 0.65rem; font-size: 0.76rem; }
+  .music-controls {
+    gap: 0.22rem;
+    justify-content: flex-start;
+  }
+  .music-controls span {
+    width: 26px; height: 26px; flex: 0 0 26px;
+    font-size: 0.72rem; border-radius: 7px;
+  }
+  .music-controls .play-main {
+    width: 30px; height: 30px; flex: 0 0 30px;
+  }
+  .track-title { overflow-wrap: break-word; word-break: break-word; }
+  .hero-title .accent { white-space: normal; }
+  .hero-title { font-size: clamp(1.7rem, 8vw, 2.4rem); }
+}
+
+
+/* Title line break helper */
+.title-break { display: none; }
+@media (max-width: 520px) {
+  .title-break { display: inline; }
+  .hero-title .accent { white-space: normal; }
 }
