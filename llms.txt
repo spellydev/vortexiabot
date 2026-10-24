@@ -1,7 +1,7 @@
 # Vortexia Bot
 
 > Vortexia Bot (also called Vortexia Discord Bot or Vortexia) is a free all-in-one Discord bot.
-> Official website: https://vortexia.run.place/
+> Official website: https://vortexia.top/
 
 ## Primary brand names
 - Vortexia Bot
@@ -12,10 +12,10 @@
 Lavalink music, antinuke, moderation, tickets, economy, levels, AI, media notifications, Minecraft tools, 200+ slash and prefix commands.
 
 ## Links
-- Home: https://vortexia.run.place/
-- Commands: https://vortexia.run.place/commands.html
-- Features: https://vortexia.run.place/features.html
-- Music: https://vortexia.run.place/music-bot.html
+- Home: https://vortexia.top/
+- Commands: https://vortexia.top/commands.html
+- Features: https://vortexia.top/features.html
+- Music: https://vortexia.top/music-bot.html
 - Invite: https://discord.com/oauth2/authorize?client_id=1205185289627115670&permissions=1099783597303&integration_type=0&scope=bot%20applications.commands
 - Support: https://discord.gg/7RfWAKeAZZ
 

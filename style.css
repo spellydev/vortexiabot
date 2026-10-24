@@ -734,3 +734,30 @@ html { scroll-behavior: smooth; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+
+/* Responsive hero/music preview fixes (desktop + mobile) */
+.hero-inner, .hero-copy, .hero-visual, .discord-mock, .mock-msg, .msg-body, .music-panel { min-width: 0; max-width: 100%; }
+.hero-visual { width: 100%; }
+.discord-mock { width: 100%; box-sizing: border-box; transform: none; animation: float-card 6s ease-in-out infinite; }
+.mock-msg { align-items: flex-start; }
+.msg-body { flex: 1 1 auto; overflow-wrap: anywhere; }
+.music-panel { box-sizing: border-box; }
+.music-controls { gap: clamp(0.25rem, 1.4vw, 0.45rem); }
+.music-controls span { flex: 0 0 32px; }
+@media (max-width: 959px) {
+  .hero { padding-top: 2.25rem; }
+  .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+  .hero-visual { overflow: hidden; }
+  .discord-mock { transform: none; animation: none; }
+  .hero-title { overflow-wrap: anywhere; font-size: clamp(2rem, 8vw, 3.25rem); }
+}
+@media (max-width: 480px) {
+  .mock-body { padding: 0.75rem; }
+  .mock-msg { gap: 0.55rem; }
+  .mock-embed { padding: 0.6rem; font-size: 0.76rem; }
+  .music-controls { gap: 0.3rem; }
+  .music-controls span { width: 29px; height: 29px; flex-basis: 29px; }
+  .music-controls .play-main { width: 32px; height: 32px; flex-basis: 32px; }
+  .track-title { overflow-wrap: anywhere; }
+}

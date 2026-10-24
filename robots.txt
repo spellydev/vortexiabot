@@ -1,4 +1,4 @@
-# Vortexia Bot — https://vortexia.run.place
+# Vortexia Bot — https://vortexia.top
 User-agent: *
 Allow: /
 
@@ -11,5 +11,5 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://vortexia.run.place/sitemap.xml
-Host: vortexia.run.place
+Sitemap: https://vortexia.top/sitemap.xml
+Host: vortexia.top

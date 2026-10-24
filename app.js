@@ -4,10 +4,8 @@
 
   const DISCORD_CLIENT_ID = "1205185289627115670";
   /* Must match a Redirect URI in Discord Developer Portal → OAuth2 */
-  const OAUTH_REDIRECT =
-    (window.location.hostname === "vortexia.run.place" || window.location.hostname.endsWith(".run.place"))
-      ? "https://vortexia.run.place/"
-      : window.location.origin + "/";
+  // Register this exact URL in Discord Developer Portal → OAuth2 → Redirects.
+  const OAUTH_REDIRECT = window.location.origin.replace(/\/$/, "") + "/";
   const AUTH_KEY = "vortexia_auth_v1";
   const REVIEWS_KEY = "vortexia_reviews_v2";
   const PKCE_VERIFIER_KEY = "vortexia_pkce_verifier";
