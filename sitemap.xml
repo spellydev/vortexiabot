@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vortexia.top/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://vortexia.top/vortexia-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://vortexia.top/features.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://vortexia.top/commands.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://vortexia.top/music-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://vortexia.top/moderation-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://vortexia.top/ticket-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://vortexia.top/economy-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://vortexia.top/faq.html</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vortexia.top/reviews.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vortexia.top/about.html</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://vortexia.top/</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq><priority>1.0</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/vortexia-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.95</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/features.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.95</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/commands.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.95</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/music-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/moderation-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/ticket-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/economy-bot.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/faq.html</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/reviews.html</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
+  <url><loc>https://vortexia.top/about.html</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><image:image><image:loc>https://vortexia.top/og-image.png</image:loc><image:title>Vortexia Bot — Free All-in-One Discord Bot</image:title></image:image></url>
 </urlset>

@@ -21,3 +21,11 @@ Lavalink music, antinuke, moderation, tickets, economy, levels, AI, media notifi
 
 ## Keywords
 Vortexia Bot, Vortexia Discord Bot, free Discord bot, Discord music bot, Discord moderation bot, Discord ticket bot, Discord economy bot, Lavalink Discord bot
+
+## More pages
+- Moderation: https://vortexia.top/moderation-bot.html
+- Tickets: https://vortexia.top/ticket-bot.html
+- Economy: https://vortexia.top/economy-bot.html
+- FAQ: https://vortexia.top/faq.html
+- Reviews: https://vortexia.top/reviews.html
+- About: https://vortexia.top/about.html

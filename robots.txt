@@ -13,3 +13,12 @@ Allow: /
 
 Sitemap: https://vortexia.top/sitemap.xml
 Host: vortexia.top
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
