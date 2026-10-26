@@ -1,0 +1,14 @@
+# Vortexia Bot
+> Vortexia is a free all-in-one Discord bot made by Spelly: Lavalink music, antinuke and moderation, tickets, giveaways, voice master, economy, levels and AI, with 200+ commands.
+
+- [Website](https://vortexia.top/): features, commands, live stats and FAQ
+- [Support server](https://discord.gg/7RfWAKeAZZ): help and feature requests
+- [Free Discord Music Bot with Lavalink](https://vortexia.top/music-bot/)
+- [Discord Moderation &amp; Antinuke Bot](https://vortexia.top/moderation-bot/)
+- [Free Discord Ticket Bot](https://vortexia.top/ticket-bot/)
+- [Discord Economy Bot](https://vortexia.top/economy-bot/)
+- [Discord Levels &amp; Rank Bot](https://vortexia.top/leveling-bot/)
+- [Discord Giveaway &amp; Invite Tracker Bot](https://vortexia.top/giveaway-bot/)
+- [Discord Welcome, Autorole &amp; Reaction Role Bot](https://vortexia.top/welcome-bot/)
+- [Discord AI &amp; Fun Bot](https://vortexia.top/ai-bot/)
+- [All commands](https://vortexia.top/commands/)
