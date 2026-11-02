@@ -20,11 +20,13 @@ See the bot package's `DASHBOARD-SETUP.md` for the hosting-side checklist. The w
 Single-domain note: Dashboard API requests use the same origin (/api). Configure the hosting reverse proxy so /api/* is forwarded to the Bot Node.js API. Bot and Website remain separate projects/ZIP files.
 
 
-## LOGIN FIX (why "page not found")
-GitHub Pages only serves static files, so https://vortexia.top/api/auth/login does not exist there. Pick ONE:
+## LOGIN FIX — "API not reachable" (do these in order)
+vortexia.top is a GitHub Pages site, so `/api/*` does not exist there. The bot must be reached through a Cloudflare Worker.
 
-**A) Same domain (recommended): Cloudflare Worker** — deploy `cloudflare/worker.js`, set `BOT_ORIGIN` to your bot host's public HTTPS address, add route `vortexia.top/*`. Leave `API_URL=""` in `dashboard/index.html`.
+1. **HidenCloud → Reverse Proxy:** DELETE the existing `vortexia.top` proxy (it fights with GitHub Pages). Create a new one: HidenCloud subdomain, e.g. `vortexiaapi` on `hidenplay.net`, allocation `ariella.hidencloud.com:24611`. Wait until `https://vortexiaapi.hidenplay.net/api/health` shows `{"ok":true,...}` in your browser (bot must be running).
+2. **Cloudflare → DNS:** `vortexia.top` records (the 4 GitHub IPs or CNAME) must be **Proxied (orange cloud)**.
+3. **Cloudflare → Workers:** create a Worker, paste `cloudflare/worker.js`, set `BOT_ORIGIN` to the address from step 1, Deploy. Add route `vortexia.top/*` (zone: vortexia.top).
+4. **Discord Developer Portal → OAuth2 → Redirects:** `https://vortexia.top/api/auth/callback`
+5. Test `https://vortexia.top/api/health`, then open `https://vortexia.top/dashboard/`.
 
-**B) Subdomain:** point `api.vortexia.top` at the bot host (HTTPS), set `const API_URL="https://api.vortexia.top"` in `dashboard/index.html`, and set `dashboard_public_url` to `https://api.vortexia.top` in the bot's `config.json`. Redirect URI in Discord becomes `https://api.vortexia.top/api/auth/callback`.
-
-Test first: `/api/health` must return `{"ok":true,...}`. The dashboard now shows "API not reachable" instead of a 404 if it doesn't.
+Leave `API_URL=""` in `dashboard/index.html`. Do not use the Cloudflare "Quick Tunnel" — its address changes every restart.
