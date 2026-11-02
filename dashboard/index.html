@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vortexia Dashboard</title><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#140a08">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#140a08;--bg2:#211311;--bg3:#2b1915;--ink:#f9f1e1;--mute:#cdb79c;--tom:#ff4f00;--tomd:#a33200;--bas:#86e09a;--moz:#fadb3a;--crust:#e8b369;--bad:#ff6b6b;--line:rgba(249,241,225,.14);--d:'Bowlby One','Arial Black',Impact,sans-serif;--b:'Figtree',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--b);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(50% 40% at 85% 0,rgba(255,79,0,.17),transparent),radial-gradient(50% 40% at 0 100%,rgba(134,224,154,.07),transparent);pointer-events:none;z-index:0}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--moz);outline-offset:2px;border-radius:8px}
+header{position:sticky;top:0;z-index:40;background:rgba(24,10,8,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+header .in{max-width:1280px;margin:auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font:20px var(--d);cursor:pointer;background:none;border:0}
+.brand img{width:36px;height:36px;border-radius:50%}.brand small{font:600 12px var(--b);color:var(--bas);border:1px solid var(--line);padding:2px 9px;border-radius:99px}
+.sp{flex:1}.me{display:flex;align-items:center;gap:8px;color:var(--mute);font-weight:600}.me img{width:30px;height:30px;border-radius:50%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:999px;font:700 15px var(--b);background:var(--tom);color:#fff;box-shadow:0 5px 0 var(--tomd);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--tomd)}.btn:active{transform:translateY(5px);box-shadow:0 0 0 var(--tomd)}
+.btn.g{background:transparent;box-shadow:inset 0 0 0 2px var(--line)}.btn.g:hover{box-shadow:inset 0 0 0 2px var(--moz);transform:none}
+.btn.s{padding:7px 14px;font-size:13px;box-shadow:0 3px 0 var(--tomd)}.btn:disabled{opacity:.55;pointer-events:none}
+.wrap{max-width:1280px;margin:auto;padding:26px 20px 120px;position:relative;z-index:1}
+h1,h2,h3{font-family:var(--d);font-weight:400}h1{font-size:clamp(34px,5vw,58px);line-height:1}h1 em{font-style:normal;color:var(--tom);text-shadow:0 3px 0 #7a2500}
+.mut{color:var(--mute)}.pill{display:inline-flex;align-items:center;gap:7px;padding:4px 12px;border:1px solid var(--line);border-radius:99px;font-size:13px;font-weight:600;color:var(--mute)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bas);animation:ping 1.8s infinite}@keyframes ping{0%{box-shadow:0 0 0 0 rgba(134,224,154,.7)}70%,100%{box-shadow:0 0 0 9px transparent}}
+/* login */
+.hero{min-height:68vh;display:grid;place-items:center;text-align:center}.hero p{max-width:52ch;margin:16px auto 26px;font-size:18px}
+.feat{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
+/* picker */
+.ph{display:flex;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}.ph .sp{min-width:10px}
+.search{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:10px 18px;width:min(320px,100%)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.sv{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:20px;cursor:pointer;transition:.18s;position:relative;overflow:hidden;animation:up .45s both}
+.sv:hover{border-color:var(--tom);transform:translateY(-4px)}.sv.off{opacity:.85;cursor:default}.sv.off:hover{transform:none;border-color:var(--line)}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.av{width:64px;height:64px;border-radius:50%;background:var(--bg3);display:grid;place-items:center;font:24px var(--d);color:var(--moz);overflow:hidden;margin-bottom:12px;border:2px solid var(--line)}.av img{width:100%;height:100%}
+.sv b{display:block;font-size:17px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sv .row{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;align-items:center}
+.tag{font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--bg3);color:var(--moz)}.tag.ok{color:var(--bas)}.tag.no{color:var(--mute)}
+/* app layout */
+.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:22px;align-items:start}
+.side{position:sticky;top:84px;background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:14px;max-height:calc(100vh - 104px);overflow:auto}
+.sh{display:flex;gap:10px;align-items:center;padding:6px 6px 14px;border-bottom:1px solid var(--line);margin-bottom:8px}.sh .av{width:42px;height:42px;font-size:16px;margin:0}.sh b{display:block;line-height:1.2}.sh small{color:var(--mute);cursor:pointer}.sh small:hover{color:var(--moz)}
+.grp{font:700 11px var(--b);letter-spacing:.1em;text-transform:uppercase;color:var(--bas);padding:12px 10px 4px}
+.nb{display:flex;align-items:center;gap:10px;width:100%;background:none;border:0;text-align:left;padding:9px 12px;border-radius:12px;cursor:pointer;color:var(--mute);font-weight:600}
+.nb:hover{background:var(--bg3);color:var(--ink)}.nb.on{background:var(--tom);color:#fff;box-shadow:0 3px 0 var(--tomd)}.nb i{font-style:normal;width:22px;text-align:center}
+.nb .led{margin-left:auto;width:8px;height:8px;border-radius:50%;background:#5b463c}.nb .led.on{background:var(--bas)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:24px;margin-bottom:18px;animation:up .35s both}
+.card h2{font-size:26px;margin-bottom:4px}.card>.sub{color:var(--mute);margin-bottom:6px}
+.sec{font:700 13px var(--b);color:var(--moz);text-transform:uppercase;letter-spacing:.08em;margin:22px 0 10px;display:flex;align-items:center;gap:10px}.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.fg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px}.fg .w{grid-column:1/-1}
+.fld label.l{display:block;font-weight:700;font-size:14px;margin-bottom:5px}.fld small{display:block;color:var(--mute);font-size:12.5px;margin-top:4px}
+input[type=text],input[type=number],select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px 14px;transition:.15s}
+textarea{min-height:110px;resize:vertical}input:hover,select:hover,textarea:hover{border-color:rgba(249,241,225,.3)}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--tom);box-shadow:0 0 0 3px rgba(255,79,0,.22)}
+select option{background:var(--bg2)}
+.tg{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:11px 14px;cursor:pointer}.tg:hover{border-color:rgba(249,241,225,.3)}.tg span.t{font-weight:600}
+.sw{position:relative;width:46px;height:26px;flex:none}.sw input{display:none}.sw i{position:absolute;inset:0;background:var(--bg3);border:1px solid var(--line);border-radius:26px;transition:.18s}
+.sw i:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:var(--mute);border-radius:50%;transition:.18s}
+.sw input:checked+i{background:var(--bas);border-color:var(--bas)}.sw input:checked+i:before{transform:translateX(20px);background:#12301a}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.chip{background:var(--bg3);border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-size:13px;font-weight:600;cursor:pointer}.chip:hover{border-color:var(--bad);color:var(--bad)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+.pv{position:sticky;top:84px}.pv .hd{font:700 12px var(--b);letter-spacing:.1em;text-transform:uppercase;color:var(--bas);margin-bottom:10px}
+.dc{background:#313338;border-radius:14px;padding:14px;color:#dbdee1;font:15px/1.4 system-ui,sans-serif}
+.dc .top{display:flex;gap:10px;align-items:center;margin-bottom:6px}.dc .top img{width:36px;height:36px;border-radius:50%;background:var(--tom)}.dc .top b{color:#fff}.dc .top em{font-style:normal;background:#5865f2;color:#fff;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:5px}
+.emb{border-left:4px solid var(--tom);background:#2b2d31;border-radius:6px;padding:10px 12px;display:grid;gap:6px}.emb h4{color:#fff;font-size:16px;margin:0}.emb .d{white-space:pre-wrap;word-break:break-word;font-size:14px}.emb img.bn{width:100%;border-radius:6px;display:block}
+.emb .th{width:56px;height:56px;border-radius:8px;background:#404249;float:right}.mn{background:#5865f233;color:#c9cdfb;border-radius:4px;padding:0 3px}
+.bt{display:inline-block;background:#248046;color:#fff;border-radius:6px;padding:6px 14px;font-weight:600;font-size:14px;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:18px}
+.st{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:18px}.st b{font:30px var(--d);color:var(--moz);display:block}.st span{color:var(--mute);font-size:13px;font-weight:600}
+.fl{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.ft{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:11px 14px;cursor:pointer;font-weight:600}.ft:hover{border-color:var(--tom)}.ft .tag{margin-left:auto}
+.lb{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.lb:first-of-type{border-top:0}.lb img{width:38px;height:38px;border-radius:50%}.lb .rk{font:18px var(--d);width:34px;color:var(--mute)}.lb:nth-of-type(1) .rk{color:var(--moz)}
+.au{padding:10px 0;border-top:1px solid var(--line)}.au:first-of-type{border-top:0}.au small{color:var(--mute)}
+.bar{position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);background:var(--bg3);border:1px solid var(--tom);border-radius:99px;padding:10px 12px 10px 22px;display:flex;align-items:center;gap:14px;z-index:50;transition:transform .3s cubic-bezier(.2,1.3,.4,1);box-shadow:0 12px 40px #000a;max-width:calc(100vw - 24px)}
+.bar.on{transform:translate(-50%,0)}.bar span{font-weight:600}
+#toast{position:fixed;top:78px;right:18px;background:var(--bg3);border:1px solid var(--line);padding:11px 18px;border-radius:14px;opacity:0;transform:translateY(-10px);pointer-events:none;transition:.25s;z-index:60;font-weight:600}#toast.on{opacity:1;transform:none}#toast.ok{border-color:var(--bas)}#toast.bad{border-color:var(--bad)}
+.sk{height:18px;border-radius:9px;background:linear-gradient(90deg,var(--bg3),#3a2620,var(--bg3));background-size:200%;animation:sh 1.2s infinite;margin:12px 0}@keyframes sh{to{background-position:-200%}}
+.burger{display:none}
+@media(max-width:1000px){.two{grid-template-columns:1fr}.pv{position:static;order:-1}}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.side{position:static;max-height:none;display:flex;gap:6px;overflow:auto;padding:10px}.sh,.grp{display:none}.nb{white-space:nowrap;width:auto}.nb .led{display:none}.fg{grid-template-columns:1fr}.me span{display:none}}
+</style></head><body>
+<header><div class="in"><button class="brand" id="home"><img src="/logo-256.png" alt="" onerror="this.style.display='none'">Vortexia <small>Dashboard</small></button><span class="sp"></span><span class="me" id="me"></span><button class="btn g s" id="out" hidden>Log out</button></div></header>
+<div class="wrap" id="app"></div><div id="toast"></div>
+<div class="bar" id="bar"><span>⚠️ You have unsaved changes</span><button class="btn g s" id="dis">Discard</button><button class="btn s" id="sv">Save changes</button></div>
+<script>
+const RAW="__API_BASE__";
+const API_URL="https://api.vortexia.top"; // <-- website copy only: your bot's public https API address
+const SELF=!RAW.startsWith("__"), BASE=SELF?RAW:API_URL;
+const $=(s,r=document)=>r.querySelector(s), app=$("#app");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let token=localStorage.vx_token||"",S={},me=null,dirty=false,snap="";
+if(location.hash.startsWith("#token=")){token=location.hash.slice(7);localStorage.vx_token=token;history.replaceState(null,"",location.pathname)}
+function toast(m,t="ok"){const e=$("#toast");e.textContent=m;e.className="on "+t;clearTimeout(toast.t);toast.t=setTimeout(()=>e.className="",2800)}
+async function api(path,opt={}){
+  const r=await fetch(BASE+path,{...opt,headers:{Authorization:"Bearer "+token,"Content-Type":"application/json"},body:opt.body?JSON.stringify(opt.body):undefined});
+  const d=await r.json().catch(()=>({}));
+  if(r.status===401){localStorage.removeItem("vx_token");token="";login();throw new Error(d.error||"login required")}
+  if(!r.ok)throw new Error(d.error||"request failed");return d}
+function setDirty(v){dirty=v;$("#bar").classList.toggle("on",v)}
+function guard(){return !dirty||confirm("You have unsaved changes. Leave without saving?")}
+$("#home").onclick=()=>{if(token&&guard()){setDirty(false);servers()}};
+$("#out").onclick=()=>{localStorage.removeItem("vx_token");token="";setDirty(false);login()};
+addEventListener("beforeunload",e=>{if(dirty){e.preventDefault();e.returnValue=""}});
+addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="s"){e.preventDefault();dirty&&$("#sv").click()}});
+function login(){
+  $("#me").innerHTML="";$("#out").hidden=true;setDirty(false);
+  app.innerHTML=`<div class="hero"><div><span class="pill"><span class="dot"></span>Control panel</span><h1 style="margin-top:16px">Run your server.<br><em>One click.</em></h1><p class="mut">Log in with Discord, pick a server where you are an Administrator, and configure Vortexia — welcome, AutoMod, tickets, invites, levels and more. Changes go live instantly.</p><a class="btn" href="${BASE}/api/auth/login${SELF?"?from=self":""}">Login with Discord</a><div class="feat">${["👋 Welcome","🛡️ AutoMod & Anti-Nuke","🎫 Tickets","📨 Invite Tracker","📈 Levels","🏷️ Auto Role","📜 Command Log"].map(x=>`<span class="pill">${x}</span>`).join("")}</div></div></div>`}
+/* ---------- server picker ---------- */
+async function servers(){
+  app.innerHTML=`<div class="sk" style="width:40%;height:42px"></div><div class="grid">${"<div class='sv'><div class='sk' style='height:120px'></div></div>".repeat(6)}</div>`;
+  const [m,g]=await Promise.all([api("/api/me"),api("/api/guilds")]);me=m;
+  $("#me").innerHTML=`${m.avatar?`<img src="${m.avatar}" alt="">`:""}<span>${esc(m.name)}</span>`;$("#out").hidden=false;
+  const draw=q=>{const L=g.guilds.filter(s=>s.name.toLowerCase().includes(q.toLowerCase()));
+    $("#gr").innerHTML=L.map((s,i)=>`<div class="sv ${s.botIn?"":"off"}" style="animation-delay:${i*.04}s" data-id="${s.id}" data-in="${s.botIn}"><div class="av">${s.icon?`<img src="${s.icon}" alt="">`:esc(s.name[0])}</div><b>${esc(s.name)}</b><div class="row"><span class="tag">${m.owner?"Bot owner":"Admin"}</span><span class="tag ${s.botIn?"ok":"no"}">${s.botIn?"● Vortexia added":"Not added"}</span></div>${s.botIn?"":`<div style="margin-top:14px"><a class="btn s" target="_blank" rel="noopener" href="${g.invite}&guild_id=${s.id}">Add Vortexia</a></div>`}</div>`).join("")||`<p class="mut">No servers found.</p>`;
+    document.querySelectorAll(".sv").forEach(e=>e.onclick=()=>e.dataset.in==="true"&&openGuild(e.dataset.id))};
+  app.innerHTML=`<div class="ph"><div><span class="pill"><span class="dot"></span>${g.guilds.filter(s=>s.botIn).length} server(s) with Vortexia</span><h1 style="margin-top:12px">Choose a <em>server</em></h1></div><span class="sp"></span><input class="search" id="q" type="text" placeholder="Search servers…"></div><div class="grid" id="gr"></div>`;
+  draw("");$("#q").oninput=e=>draw(e.target.value)}
+/* ---------- guild shell ---------- */
+const GROUPS=[["General",["overview","audit"]],["Engagement",["welcome","levels","autorole","invites","leaderboard"]],["Safety",["automod","banwords"]],["Support",["tickets"]],["Server",["cmdlog","modules"]]];
+const EXTRA={overview:["📊","Overview"],audit:["🕘","Activity"],banwords:["🚫","Banned words"],leaderboard:["🏆","Leaderboard"]};
+async function openGuild(id){
+  app.innerHTML=`<div class="card"><div class="sk"></div><div class="sk" style="width:60%"></div></div>`;
+  const d=await api("/api/guilds/"+id);S={id,...d};
+  const meta=k=>EXTRA[k]||[d.modules[k]?.icon,d.modules[k]?.title];
+  app.innerHTML=`<div class="layout"><aside class="side"><div class="sh"><div class="av">${d.guild.icon?`<img src="${d.guild.icon}" alt="">`:esc(d.guild.name[0])}</div><div><b>${esc(d.guild.name)}</b><small id="chg">⇄ Switch server</small></div></div>${GROUPS.map(([t,ks])=>`<div class="grp">${t}</div>`+ks.filter(k=>EXTRA[k]||d.modules[k]).map(k=>`<button class="nb" data-k="${k}"><i>${meta(k)[0]}</i>${esc(meta(k)[1])}<span class="led"></span></button>`).join("")).join("")}</aside><main id="main"></main></div>`;
+  $("#chg").onclick=()=>{if(guard()){setDirty(false);servers()}};
+  document.querySelectorAll(".nb").forEach(b=>b.onclick=()=>{if(guard()){setDirty(false);view(b.dataset.k)}});
+  view("overview")}
+async function view(k){
+  document.querySelectorAll(".nb").forEach(b=>b.classList.toggle("on",b.dataset.k===k));S.cur=k;
+  const m=$("#main");m.innerHTML=`<div class="card"><div class="sk" style="width:35%;height:30px"></div><div class="sk"></div><div class="sk" style="width:80%"></div></div>`;
+  try{({overview,audit,banwords,leaderboard}[k]||form)(m,k)}catch(e){m.innerHTML=`<div class="card">⚠️ ${esc(e.message)}</div>`}
+  scrollTo({top:0})}
+async function overview(m){
+  const o=await api(`/api/guilds/${S.id}/overview`),g=S.guild;
+  o.features.forEach(f=>{const l=document.querySelector(`.nb[data-k="${f.key}"] .led`);l&&l.classList.toggle("on",f.on)});
+  m.innerHTML=`<div class="stats">${[["Members",g.members],["Channels",g.channels],["Roles",g.roles],["Boosts",g.boosts],["Ranked users",o.tracked],["Banned words",o.banwords]].map(([a,b])=>`<div class="st"><b>${Number(b).toLocaleString()}</b><span>${a}</span></div>`).join("")}</div>
+  <div class="card"><h2>Features</h2><p class="sub">Click a feature to configure it. Green = active.</p><div class="fl">${o.features.map(f=>`<div class="ft" data-k="${f.key}"><span>${f.icon}</span>${esc(f.title)}<span class="tag ${f.on?"ok":"no"}">${f.on?"ON":"OFF"}</span></div>`).join("")}</div></div>
+  <div class="card"><h2>Bot status</h2><p class="sub"><span class="dot" style="display:inline-block;margin-right:8px"></span>Online · ${o.bot.ping}ms · ${o.bot.servers} servers · ${o.bot.commands} commands · up ${Math.floor(o.bot.uptime/3600)}h ${Math.floor(o.bot.uptime%3600/60)}m</p></div>`;
+  m.querySelectorAll(".ft").forEach(e=>e.onclick=()=>view(e.dataset.k))}
+async function audit(m){const {rows}=await api(`/api/guilds/${S.id}/audit`);
+  m.innerHTML=`<div class="card"><h2>Activity</h2><p class="sub">Latest dashboard changes in this server.</p>${rows.map(r=>`<div class="au"><b>${esc(r.name)}</b> changed <b>${esc(r.title)}</b><br><small>${new Date(r.at).toLocaleString()} · ${r.changed.map(esc).join(", ")}</small></div>`).join("")||`<p class="mut" style="margin-top:14px">No changes yet.</p>`}</div>`}
+/* ---------- generic form ---------- */
+const COL={blue:"#5865f2",red:"#ed4245",green:"#57f287",orange:"#ff6a00",yellow:"#fee75c",purple:"#9b59b6",pink:"#eb459e",white:"#ffffff",black:"#23272a",gold:"#f1c40f",cyan:"#1abc9c"};
+const hex=c=>{c=String(c||"").trim();return /^#?[0-9a-f]{6}$/i.test(c)?(c[0]==="#"?c:"#"+c):COL[c.toLowerCase()]||"#ff4f00"};
+const pick=(a,items,v,e)=>`<select ${a}><option value="">${e}</option>${items.map(i=>`<option value="${i.id}" ${i.id===v?"selected":""}>${esc(i.name)}</option>`).join("")}</select>`;
+const multi=(f,items,v)=>`<div class="chips" data-chips="${f.key}">${(v||[]).map(x=>`<span class="chip" data-v="${x}">${esc((items.find(i=>i.id===x)||{name:x}).name)} ✕</span>`).join("")}</div>`+pick(`data-add="${f.key}"`,items,"","+ Add…");
+async function form(m,k){
+  const mod=S.modules[k],{values}=await api(`/api/guilds/${S.id}/modules/${k}`);
+  const ch=S.channels.map(c=>({id:c.id,name:(c.type===2||c.type===13?"🔊 ":"# ")+c.name})),ro=S.roles.map(r=>({id:r.id,name:"@ "+r.name}));
+  let body="",open=false;
+  const fld=f=>{const v=values[f.key];let c,wide=false;
+    if(f.type==="bool")return `<label class="tg"><span class="t">${esc(f.label)}</span><span class="sw"><input type="checkbox" data-k="${f.key}" ${v?"checked":""}><i></i></span></label>`;
+    if(f.type==="number")c=`<input type="number" data-k="${f.key}" min="${f.min}" max="${f.max}" value="${esc(v)}">`;
+    else if(f.type==="text")c=`<input type="text" data-k="${f.key}" maxlength="${f.max}" value="${esc(v)}">`;
+    else if(f.type==="textarea"){wide=true;c=`<textarea data-k="${f.key}" maxlength="${f.max}">${esc(v)}</textarea>`}
+    else if(f.type==="select")c=`<select data-k="${f.key}">${f.options.map(o=>`<option ${o===v?"selected":""}>${o}</option>`).join("")}</select>`;
+    else if(f.type==="channel")c=pick(`data-k="${f.key}"`,ch,v,"— none —");else if(f.type==="role")c=pick(`data-k="${f.key}"`,ro,v,"— none —");
+    else if(f.type==="channels"){wide=true;c=multi(f,ch,v)}else if(f.type==="roles"){wide=true;c=multi(f,ro,v)}
+    else if(f.type==="list"){wide=true;c=`<textarea data-k="${f.key}" data-list="1">${esc((v||[]).join("\n"))}</textarea>`}
+    return `<div class="fld ${wide?"w":""}"><label class="l">${esc(f.label)}</label>${c}${f.hint?`<small>${esc(f.hint)}</small>`:""}</div>`};
+  for(const f of mod.fields){ if(f.section){if(open)body+="</div>";body+=`<div class="sec">${esc(f.section)}</div><div class="fg">`;open=true}else{if(!open){body+='<div class="fg">';open=true}body+=fld(f)}}
+  if(open)body+="</div>";
+  const pv=mod.preview;
+  m.innerHTML=`<div class="${pv?"two":""}"><div class="card" id="fc"><h2>${mod.icon} ${esc(mod.title)}</h2><p class="sub">${esc(mod.desc)}</p>${body}</div>${pv?`<div class="pv"><div class="hd">Live preview</div><div class="dc"><div class="top"><img alt=""><b>Vortexia</b><em>BOT</em></div><div id="pe"></div></div></div>`:""}</div>`;
+  const root=$("#fc");
+  const collect=()=>{const o={};root.querySelectorAll("[data-k]").forEach(e=>o[e.dataset.k]=e.type==="checkbox"?e.checked:e.dataset.list?e.value.split("\n"):e.value);
+    root.querySelectorAll("[data-chips]").forEach(b=>o[b.dataset.chips]=[...b.querySelectorAll(".chip")].map(c=>c.dataset.v));return o};
+  const render=()=>{if(!pv)return;const o=collect();const fx=t=>esc(t).replace(/\{(user|member)\}/g,'<span class="mn">@'+esc(me?.name||"NewMember")+'</span>').replace(/\{server\}/g,esc(S.guild.name)).replace(/\{(membercount|count)\}/g,S.guild.members).replace(/\{inviter\}/g,'<span class="mn">@Inviter</span>').replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\{(\w+)\}/g,"{$1}");
+    const th=pv.thumb?o[pv.thumb]:"";$("#pe").innerHTML=`<div class="emb" style="border-color:${hex(o[pv.color])}">${th?`<div class="th"></div>`:""}${pv.title&&o[pv.title]?`<h4>${fx(o[pv.title])}</h4>`:""}<div class="d">${fx(o[pv.desc]||"")||"<span style='opacity:.5'>Empty message</span>"}</div>${pv.image&&/^https?:/.test(o[pv.image]||"")?`<img class="bn" src="${esc(o[pv.image])}" alt="">`:""}</div>${pv.button&&o[pv.button]?`<span class="bt">🎫 ${esc(o[pv.button])}</span>`:""}`};
+  snap=JSON.stringify(collect());render();setDirty(false);
+  const chg=()=>{render();setDirty(JSON.stringify(collect())!==snap)};
+  root.addEventListener("input",chg);root.addEventListener("change",chg);
+  root.querySelectorAll("[data-add]").forEach(s=>s.onchange=()=>{if(!s.value)return;const f=mod.fields.find(x=>x.key===s.dataset.add),src=f.type==="roles"?ro:ch,box=root.querySelector(`[data-chips="${f.key}"]`);
+    if(!box.querySelector(`[data-v="${s.value}"]`)){const sp=document.createElement("span");sp.className="chip";sp.dataset.v=s.value;sp.textContent=src.find(i=>i.id===s.value).name+" ✕";box.append(sp)}s.value="";chg()});
+  root.addEventListener("click",e=>{if(e.target.classList.contains("chip")){e.target.remove();chg()}});
+  $("#dis").onclick=()=>{setDirty(false);form(m,k)};
+  $("#sv").onclick=async()=>{const b=$("#sv");b.disabled=true;try{const r=await api(`/api/guilds/${S.id}/modules/${k}`,{method:"PUT",body:{values:collect()}});snap=JSON.stringify(collect());setDirty(false);toast("Saved — live on the bot ✓")}catch(e){toast(e.message,"bad")}b.disabled=false}}
+async function banwords(m){const {words}=await api(`/api/guilds/${S.id}/banwords`);
+  m.innerHTML=`<div class="card"><h2>🚫 Banned words</h2><p class="sub">One word or phrase per line. Used by the AutoMod “banwords” filter.</p><div class="sec">${words.length} words</div><textarea id="bw" style="min-height:300px">${esc(words.join("\n"))}</textarea></div>`;
+  snap=words.join("\n");setDirty(false);$("#bw").oninput=()=>setDirty($("#bw").value!==snap);
+  $("#dis").onclick=()=>{setDirty(false);banwords(m)};
+  $("#sv").onclick=async()=>{try{const r=await api(`/api/guilds/${S.id}/banwords`,{method:"PUT",body:{words:$("#bw").value.split("\n")}});$("#bw").value=r.words.join("\n");snap=$("#bw").value;setDirty(false);toast("Saved ✓")}catch(e){toast(e.message,"bad")}}}
+async function leaderboard(m){const {rows}=await api(`/api/guilds/${S.id}/leaderboard`);
+  m.innerHTML=`<div class="card"><h2>🏆 Leaderboard</h2><p class="sub">Top 25 by level.</p>${rows.map((r,i)=>`<div class="lb"><span class="rk">${i+1}</span>${r.avatar?`<img src="${r.avatar}" alt="">`:""}<b style="flex:1">${esc(r.name)}</b><span class="tag">Lv ${r.level}</span><span class="mut">${r.xp.toLocaleString()} XP</span></div>`).join("")||`<p class="mut" style="margin-top:14px">No data yet.</p>`}</div>`}
+(async()=>{if(!token)return login();try{await servers()}catch(e){if(token)app.innerHTML=`<div class="hero"><div><p>⚠️ ${esc(e.message)}</p><button class="btn" onclick="location.reload()">Retry</button></div></div>`}})();
+</script></body></html>
