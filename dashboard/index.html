@@ -84,7 +84,7 @@ select option{background:var(--bg2)}
 <div class="bar" id="bar"><span>⚠️ You have unsaved changes</span><button class="btn g s" id="dis">Discard</button><button class="btn s" id="sv">Save changes</button></div>
 <script>
 const RAW="__API_BASE__";
-const API_URL="https://api.vortexia.top"; // <-- website copy only: your bot's public https API address
+const API_URL=""; // <-- website copy only: your bot's public https API address
 const SELF=!RAW.startsWith("__"), BASE=SELF?RAW:API_URL;
 const $=(s,r=document)=>r.querySelector(s), app=$("#app");
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
