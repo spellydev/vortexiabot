@@ -1,25 +1,17 @@
-# Connect bot -> website with NO terminal
+# Vortexia Website deployment
 
-1. Upload `src/systems/webStats.js` and the patched `index.js` to your bot host (file manager), restart the bot.
-2. On GitHub (the repo your website lives in): Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens
-   -> Generate. Repository access: ONLY your website repo. Permissions: Contents = Read and write. Copy the token.
-3. In your bot's config.json add (or use the host's Variables tab with the same names in CAPS, e.g. WEB_STATS_GITHUB_TOKEN):
-   "web_stats_github_token": "PASTE_TOKEN",
-   "web_stats_github_repo": "yourgithubname/your-website-repo"
-4. Restart. After ~1 minute the bot creates stats.json in the repo, then updates it every 30 min. The site reads it automatically.
-Keep the token private (never put it in the website files).
+Upload the **contents of this folder** to the root of the GitHub Pages repository (not the enclosing folder). Keep the existing page folders and assets.
 
-## v6 notes
-- Replace `src/systems/webStats.js` and `STATS-SETUP.md` on the bot host with the ones in the bot patch zip, then restart. The site then auto-shows server icons (Kitchens) and top-level user avatars (Top chefs) from `stats.json`.
-- Until the bot pushes the new `stats.json`, those two sections show friendly empty states.
-- Owner name is `CFG.owner` in `index.html` (and `web_owner_name` in the bot config).
-- Easter egg: tap the logo 5 times.
-
-
-## Dashboard OAuth2 connection
-
+## Dashboard connection
 - Website: `https://vortexia.top`
-- API: `https://api.vortexia.top`
-- Discord OAuth2 redirect: `https://api.vortexia.top/api/auth/callback`
+- Dashboard API: `https://api.vortexia.top`
+- Discord OAuth2 callback: `https://api.vortexia.top/api/auth/callback`
 
-The dashboard frontend calls this API. The website CSP now permits the API origin. Deploy this package to the existing website repository without deleting other pages. The API domain must be bound to the bot application and allocated port in Hidden Cloud, and its HTTPS certificate must be Active. Use proxy forwarding, not a browser redirect.
+The Dashboard page calls the bot's API at `https://api.vortexia.top`. The bot host must expose the Node.js dashboard API through a working HTTPS custom-domain reverse proxy for that hostname. DNS alone, or pointing a CNAME at a provider's generic website, does not forward HTTP requests to the bot's application port.
+
+In the Discord Developer Portal for the same application as the bot, add this exact OAuth2 redirect:
+`https://api.vortexia.top/api/auth/callback`
+
+Do not place bot tokens, OAuth client secrets, API keys, or session secrets in this website repository. Configure those privately in the bot host's Variables/Secrets panel or the bot's existing private config.
+
+See the bot package's `DASHBOARD-SETUP.md` for the hosting-side checklist. The website package cannot bind the API hostname or issue its HTTPS certificate.
