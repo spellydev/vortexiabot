@@ -1,7 +1,7 @@
 // Cloudflare Worker for Vortexia — sends /api/* and /setup to the bot, everything else to GitHub Pages.
 // CHANGE ONLY THIS LINE: the HTTPS address HidenCloud gave you for the bot (no trailing slash, no port).
 // Example: const BOT_ORIGIN = "https://vortexiaapi.hidenplay.net";
-const BOT_ORIGIN = "https://YOUR-BOT-PUBLIC-HTTPS-ADDRESS";
+const BOT_ORIGIN = "http://ariella.hidencloud.com:24611";
 
 export default {
   async fetch(request) {
