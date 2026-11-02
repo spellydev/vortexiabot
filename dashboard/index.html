@@ -84,7 +84,7 @@ select option{background:var(--bg2)}
 <div class="bar" id="bar"><span>⚠️ You have unsaved changes</span><button class="btn g s" id="dis">Discard</button><button class="btn s" id="sv">Save changes</button></div>
 <script>
 const RAW="__API_BASE__";
-const API_URL=""; // <-- website copy only: your bot's public https API address
+const API_URL=""; // "" = same origin (vortexia.top/api/* must be routed to the bot, see SETUP.md). Or set e.g. "https://api.vortexia.top"
 const SELF=!RAW.startsWith("__"), BASE=SELF?RAW:API_URL;
 const $=(s,r=document)=>r.querySelector(s), app=$("#app");
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -102,7 +102,11 @@ $("#home").onclick=()=>{if(token&&guard()){setDirty(false);servers()}};
 $("#out").onclick=()=>{localStorage.removeItem("vx_token");token="";setDirty(false);login()};
 addEventListener("beforeunload",e=>{if(dirty){e.preventDefault();e.returnValue=""}});
 addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="s"){e.preventDefault();dirty&&$("#sv").click()}});
-function login(){
+async function apiUp(){try{const r=await fetch(BASE+"/api/health",{cache:"no-store"});const d=await r.json();return !!d.ok}catch{return false}}
+async function login(){
+  if(!(await apiUp())){app.innerHTML=`<div class="hero"><div><span class="pill"><span class="dot"></span>Dashboard offline</span><h1 style="margin-top:16px">API <em>not reachable</em></h1><p class="mut">The website cannot reach the bot's dashboard API at <b>${esc(BASE||location.origin)}/api/health</b>. The bot must be running and this address must be routed to it (see SETUP.md).</p><button class="btn" onclick="location.reload()">Retry</button></div></div>`;return}
+  loginView()}
+function loginView(){
   $("#me").innerHTML="";$("#out").hidden=true;setDirty(false);
   app.innerHTML=`<div class="hero"><div><span class="pill"><span class="dot"></span>Control panel</span><h1 style="margin-top:16px">Run your server.<br><em>One click.</em></h1><p class="mut">Log in with Discord, pick a server where you are an Administrator, and configure Vortexia — welcome, AutoMod, tickets, invites, levels and more. Changes go live instantly.</p><a class="btn" href="${BASE}/api/auth/login${SELF?"?from=self":""}">Login with Discord</a><div class="feat">${["👋 Welcome","🛡️ AutoMod & Anti-Nuke","🎫 Tickets","📨 Invite Tracker","📈 Levels","🏷️ Auto Role","📜 Command Log"].map(x=>`<span class="pill">${x}</span>`).join("")}</div></div></div>`}
 /* ---------- server picker ---------- */

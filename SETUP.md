@@ -18,3 +18,13 @@ See the bot package's `DASHBOARD-SETUP.md` for the hosting-side checklist. The w
 
 
 Single-domain note: Dashboard API requests use the same origin (/api). Configure the hosting reverse proxy so /api/* is forwarded to the Bot Node.js API. Bot and Website remain separate projects/ZIP files.
+
+
+## LOGIN FIX (why "page not found")
+GitHub Pages only serves static files, so https://vortexia.top/api/auth/login does not exist there. Pick ONE:
+
+**A) Same domain (recommended): Cloudflare Worker** — deploy `cloudflare/worker.js`, set `BOT_ORIGIN` to your bot host's public HTTPS address, add route `vortexia.top/*`. Leave `API_URL=""` in `dashboard/index.html`.
+
+**B) Subdomain:** point `api.vortexia.top` at the bot host (HTTPS), set `const API_URL="https://api.vortexia.top"` in `dashboard/index.html`, and set `dashboard_public_url` to `https://api.vortexia.top` in the bot's `config.json`. Redirect URI in Discord becomes `https://api.vortexia.top/api/auth/callback`.
+
+Test first: `/api/health` must return `{"ok":true,...}`. The dashboard now shows "API not reachable" instead of a 404 if it doesn't.
