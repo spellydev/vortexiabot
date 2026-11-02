@@ -14,3 +14,12 @@ Keep the token private (never put it in the website files).
 - Until the bot pushes the new `stats.json`, those two sections show friendly empty states.
 - Owner name is `CFG.owner` in `index.html` (and `web_owner_name` in the bot config).
 - Easter egg: tap the logo 5 times.
+
+
+## Dashboard OAuth2 connection
+
+- Website: `https://vortexia.top`
+- API: `https://api.vortexia.top`
+- Discord OAuth2 redirect: `https://api.vortexia.top/api/auth/callback`
+
+The dashboard frontend calls this API. The website CSP now permits the API origin. Deploy this package to the existing website repository without deleting other pages. The API domain must be bound to the bot application and allocated port in Hidden Cloud, and its HTTPS certificate must be Active. Use proxy forwarding, not a browser redirect.
