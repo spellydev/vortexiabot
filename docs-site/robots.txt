@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://docs.vortexia.top/sitemap.xml

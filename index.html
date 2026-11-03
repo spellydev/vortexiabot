@@ -403,7 +403,7 @@ footer a:hover{color:var(--ink)}
 <div id="bar"></div>
 <header><div class="w">
   <button class="brand" id="logo" aria-label="Vortexia Bot"><img src="logo-256.png?v=4" alt="Vortexia Bot logo" width="36" height="36" decoding="async">Vortexia Bot</button>
-  <nav id="nav"><a href="#stats">Live stats</a><a href="#features">Menu</a><a href="#compare">vs Dyno/MEE6</a><a href="#commands">Commands</a><a href="/alternatives/">Alternatives</a><a href="#faq">FAQ</a><a href="/dashboard/">Dashboard</a><a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Support</a></nav>
+  <nav id="nav"><a href="#stats">Live stats</a><a href="#features">Menu</a><a href="#compare">vs Dyno/MEE6</a><a href="#commands">Commands</a><a href="/alternatives/">Alternatives</a><a href="#faq">FAQ</a><a href="https://docs.vortexia.top/" target="_blank" rel="noopener">Docs</a><a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Support</a></nav>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
   <a class="btn" data-invite target="_blank" rel="noopener">Add to Discord</a>
 </div></header>
@@ -411,7 +411,7 @@ footer a:hover{color:var(--ink)}
 <main id="main">
 <section class="hero"><div class="w">
   <div>
-    <span class="pill"><i class="dot"></i>Free forever · v4</span><span class="pill">Baked by <b id="own1">Spelly</b></span>
+    <span class="pill"><i class="dot"></i>Free forever · V5.0.0</span><span class="pill">Baked by <b id="own1">Spelly</b></span>
     <h1>Your server, <em>served hot.</em></h1>
     <p class="lead">Music, moderation, tickets, economy, levels and AI, baked into one Discord bot. One free invite replaces Dyno, MEE6, Carl-bot and a whole pile of other bots.</p>
     <div class="cta"><a class="btn" data-invite target="_blank" rel="noopener">Add to Discord →</a><a class="btn g" href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Join support server</a></div>
@@ -460,13 +460,13 @@ footer a:hover{color:var(--ink)}
   <p class="sub rv">Everything a server needs, from one bot with one invite.</p>
   <div class="bento">
     <div class="bx big rv"><i>🎵</i><h3>Lavalink music</h3><p>Smooth, high-quality playback with a control panel, queue, filters, lyrics and 24/7 mode.</p><code>/play</code><code>filters</code><code>lyrics</code></div>
-    <div class="bx big rv"><i>🛡️</i><h3>Antinuke & moderation</h3><p>Ban, kick, timeout, purge, locks and automod, plus protection that bites back when raiders show up.</p><code>/automod</code><code>/warn</code><code>/nuke</code></div>
+    <div class="bx big rv"><i>🛡️</i><h3>Antinuke & moderation</h3><p>Temp bans, temporary roles, AutoMod, banned-word filters, strikes, event logs and anti-nuke protection.</p><code>/automod</code><code>/tempban</code><code>/temprole</code><code>/banwords</code></div>
     <div class="bx rv"><i>🎫</i><h3>Tickets</h3><p>Support panels, claim flows and tidy private channels.</p></div>
-    <div class="bx rv"><i>💰</i><h3>Economy</h3><p>Balance, daily, work and pay, with a server leaderboard.</p></div>
-    <div class="bx rv"><i>📈</i><h3>Levels & rank</h3><p>XP ranks, leaderboards and profile cards.</p></div>
+    <div class="bx rv"><i>💰</i><h3>Economy</h3><p>V-Cash, daily rewards, jobs, payments, blackjack, lotteries, pets, hunting, weapons and quests.</p></div>
+    <div class="bx rv"><i>📈</i><h3>Levels & rank</h3><p>XP ranks, leaderboards, profile cards and the separate V-Game progression system.</p></div>
     <div class="bx rv"><i>🎉</i><h3>Giveaways & invites</h3><p>Run giveaways, track who invited whom, and reward top inviters.</p></div>
     <div class="bx rv"><i>👋</i><h3>Welcome & roles</h3><p>Welcome messages, autoroles, reaction roles and verification.</p></div>
-    <div class="bx rv"><i>🤖</i><h3>AI & fun</h3><p>AI chat, memes, 8ball, ship, hugs and more with the <code style="margin:0">?</code> prefix.</p></div>
+    <div class="bx rv"><i>🤖</i><h3>AI & fun</h3><p>AI chat, memes, 8-ball, social actions, quick utilities and a full V-Game command system.</p></div>
   </div>
 </div></section>
 
@@ -494,7 +494,7 @@ footer a:hover{color:var(--ink)}
       </tbody>
     </table>
   </div>
-  <p class="sub rv" style="margin-top:20px;max-width:62ch">Switching is simple: invite Vortexia, run <code>/settings</code> and <code>/features</code>, then disable the old bots when you’re ready. No data lock-in on the free features that matter most. <a href="/alternatives/" style="color:var(--moz)">Read the full alternatives guide →</a></p>
+  <p class="sub rv" style="margin-top:20px;max-width:62ch">Switching is simple: invite Vortexia, use <code>/help</code> and <code>/features</code> to explore the current command set, configure each module with its setup command, then disable the old bots when you’re ready. No data lock-in on the free features that matter most. <a href="/alternatives/" style="color:var(--moz)">Read the full alternatives guide →</a></p>
 </div></section>
 
 <section><div class="w">
@@ -520,7 +520,7 @@ footer a:hover{color:var(--ink)}
   <h2 class="rv">Pick your toppings</h2>
   <p class="sub rv">Slash and prefix commands, grouped. Tap one to copy it.</p>
   <div class="ctl">
-    <div class="seg" role="group" aria-label="Command type"><button class="on" data-m="s">Slash /</button><button data-m="p">Prefix ?</button></div>
+    <div class="seg" role="group" aria-label="Command type"><button class="on" data-m="s">Slash /</button><button data-m="p">Prefix ?</button><button data-m="v">V-Game v</button></div>
     <input id="q" type="search" placeholder="Search commands…" aria-label="Search commands" autocomplete="off">
   </div>
   <div class="tabs" id="tabs"></div>
@@ -539,7 +539,7 @@ footer a:hover{color:var(--ink)}
   <h2 class="rv">Order in 3 steps</h2><p class="sub rv">No account, no paywall, no waiting.</p>
   <div class="steps">
     <div class="step rv"><h3>Invite</h3><p>Hit Add to Discord and keep the suggested permissions so music and mod work instantly.</p></div>
-    <div class="step rv"><h3>Season</h3><p>Run <code>/settings</code> and <code>/features</code> to set up welcome, tickets, levels and antinuke.</p></div>
+    <div class="step rv"><h3>Season</h3><p>Start with <code>/help</code> and <code>/features</code>, then configure modules with commands such as <code>/welcome</code>, <code>/ticket setup</code>, <code>/verify setup</code> and <code>/voicemaster setup</code>.</p></div>
     <div class="step rv"><h3>Enjoy</h3><p>Drop a track in voice with <code>/play</code> and let Vortexia guard the kitchen.</p></div>
   </div>
 </div></section>
@@ -574,7 +574,7 @@ footer a:hover{color:var(--ink)}
 </div></div></section>
 </main>
 
-<footer><div class="w"><span>© 2026 Vortexia Bot · Made by <b id="own4">Spelly</b> · Not affiliated with Discord</span><span><a data-invite target="_blank" rel="noopener">Invite</a> · <a href="/dashboard/">Dashboard</a> · <a href="/alternatives/">Dyno/MEE6 alternatives</a> · <a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Support</a></span></div><div class="w" style="padding-top:0"><nav aria-label="Explore Vortexia" style="font-size:14px"><a href="/alternatives/" style="margin:4px 12px 4px 0;color:var(--moz)">Best Dyno, MEE6 &amp; Carl-bot Alternatives</a><a href="/music-bot/" style="margin:4px 12px 4px 0">Free Discord Music Bot with Lavalink</a><a href="/moderation-bot/" style="margin:4px 12px 4px 0">Discord Moderation &amp; Antinuke Bot</a><a href="/ticket-bot/" style="margin:4px 12px 4px 0">Free Discord Ticket Bot</a><a href="/economy-bot/" style="margin:4px 12px 4px 0">Discord Economy Bot</a><a href="/leveling-bot/" style="margin:4px 12px 4px 0">Discord Levels &amp; Rank Bot</a><a href="/giveaway-bot/" style="margin:4px 12px 4px 0">Discord Giveaway &amp; Invite Tracker Bot</a><a href="/welcome-bot/" style="margin:4px 12px 4px 0">Discord Welcome, Autorole &amp; Reaction Role Bot</a><a href="/ai-bot/" style="margin:4px 12px 4px 0">Discord AI &amp; Fun Bot</a><a href="/commands/">All commands</a></nav></div></footer>
+<footer><div class="w"><span>© 2026 Vortexia Bot · Made by <b id="own4">Spelly</b> · Not affiliated with Discord</span><span><a data-invite target="_blank" rel="noopener">Invite</a> · <a href="https://docs.vortexia.top/" target="_blank" rel="noopener">Docs</a> · <a href="/alternatives/">Dyno/MEE6 alternatives</a> · <a href="https://discord.gg/7RfWAKeAZZ" target="_blank" rel="noopener">Support</a></span></div><div class="w" style="padding-top:0"><nav aria-label="Explore Vortexia" style="font-size:14px"><a href="/alternatives/" style="margin:4px 12px 4px 0;color:var(--moz)">Best Dyno, MEE6 &amp; Carl-bot Alternatives</a><a href="/music-bot/" style="margin:4px 12px 4px 0">Free Discord Music Bot with Lavalink</a><a href="/moderation-bot/" style="margin:4px 12px 4px 0">Discord Moderation &amp; Antinuke Bot</a><a href="/ticket-bot/" style="margin:4px 12px 4px 0">Free Discord Ticket Bot</a><a href="/economy-bot/" style="margin:4px 12px 4px 0">Discord Economy Bot</a><a href="/leveling-bot/" style="margin:4px 12px 4px 0">Discord Levels &amp; Rank Bot</a><a href="/giveaway-bot/" style="margin:4px 12px 4px 0">Discord Giveaway &amp; Invite Tracker Bot</a><a href="/welcome-bot/" style="margin:4px 12px 4px 0">Discord Welcome, Autorole &amp; Reaction Role Bot</a><a href="/ai-bot/" style="margin:4px 12px 4px 0">Discord AI &amp; Fun Bot</a><a href="/commands/">All commands</a><a href="https://docs.vortexia.top/" target="_blank" rel="noopener">Docs</a></nav></div></footer>
 <div id="dv" role="dialog" aria-live="polite" aria-label="Delivering Vortexia Bot"><div class="road"><div class="bike"><span>🛵</span></div><div class="box">🍕</div><span class="steam"></span><span class="steam"></span><span class="steam"></span></div><h3 id="dvt">Delivering Vortexia Bot…</h3><p>Your pizza is on the way — Discord opens next.</p><button type="button" id="dvs">Skip & open Discord</button></div>
 <div id="toast" role="status"></div>
 
@@ -635,35 +635,42 @@ var S=[
  {t:"Music",d:"Queue a track in one command",h:'<div class="msg"><div class="av">S</div><div><b>Spelly</b><p><u>/play</u> <span class="type">lofi pizza beats</span></p></div></div><div class="msg">'+BOT+'<div><b>Vortexia<em>BOT</em></b><div class="emb"><h4>🎵 Now playing</h4>Lofi Pizza Beats — Oven Radio<div class="prog"><span></span></div>0:42 / 3:18 · Volume 80%</div><div class="btns"><span>⏮</span><span class="p">⏯</span><span>⏭</span><span>🔁</span><span>📜 Queue</span><span>🎚 Filters</span></div></div></div>'},
  {t:"Tickets",d:"Private help channels for staff",h:'<div class="msg"><div class="av">M</div><div><b>Mina</b><p>clicked <u>🎫 Open ticket</u></p></div></div><div class="msg">'+BOT+'<div><b>Vortexia<em>BOT</em></b><div class="emb"><h4>🎫 Ticket #0042 opened</h4>Hi Mina, staff will be with you shortly. Tell us what you need.</div><div class="btns"><span class="p">Claim</span><span>Close</span></div></div></div>'},
  {t:"Levels",d:"XP, ranks and leaderboards",h:'<div class="msg"><div class="av">R</div><div><b>Rafi</b><p><u>?rank</u></p></div></div><div class="msg">'+BOT+'<div><b>Vortexia<em>BOT</em></b><div class="emb"><h4>📈 Rafi · Level 17</h4>4,014 XP · Rank #1<div class="prog"><span style="animation:none;transform:scaleX(.72)"></span></div>Next level in 386 XP</div></div></div>'},
- {t:"Moderation",d:"Quick actions that stay tidy",h:'<div class="msg"><div class="av">S</div><div><b>Spelly</b><p><u>/timeout</u> <span class="type">@raider 10m</span></p></div></div><div class="msg">'+BOT+'<div><b>Vortexia<em>BOT</em></b><div class="emb"><h4>🛡️ Timed out</h4>@raider can’t chat for 10 minutes. Logged for the mod team.</div></div></div>'}
+ {t:"Moderation",d:"Quick actions that stay tidy",h:'<div class="msg"><div class="av">S</div><div><b>Spelly</b><p><u>?timeout</u> <span class="type">@raider 10m</span></p></div></div><div class="msg">'+BOT+'<div><b>Vortexia<em>BOT</em></b><div class="emb"><h4>🛡️ Timed out</h4>@raider can’t chat for 10 minutes. Logged for the mod team.</div></div></div>'}
 ];
 $("#scenes").innerHTML=S.map(function(s,i){return'<button class="sc'+(i?'':' on')+'" data-i="'+i+'">'+s.t+'<small>'+s.d+'</small></button>'}).join("");
 function scene(i){$$(".sc").forEach(function(b){b.classList.toggle("on",b.dataset.i==i)});$("#chat").innerHTML='<div class="scene">'+S[i].h+'</div>'}
 $$(".sc").forEach(function(b){b.onclick=function(){scene(b.dataset.i)}});scene(0);
 
-/* commands (taken from the bot's real command list) */
+/* V5.0.0 command catalogue — aligned with the current bot source */
 var CS={
 "Music":"play",
-"Moderation":"ban unban kick timeout mute unmute warn warnings clearwarnings purge lock unlock slowmode nuke automod banwords strikes perms report logs commandlog",
-"Economy":"balance daily work pay economy eco-leaderboard",
-"Levels":"rank levels level-leaderboard leaderboard profile birthday",
-"Invites":"invites invitestats invitereset invite-panel createinvite boosters",
-"Server setup":"welcome autorole autoresponse autoresponse-list autoresponse-remove ticket giveaway reactionrole verify settings features servers massrole role roles nickname",
-"Embeds & say":"embed editembed copyembed say dm dmall",
-"Utility":"help ping uptime stats statsboard health botinfo botinvite vote review avatar banner userinfo serverinfo servericon membercount channelinfo calc timestamp password base64 color afk snipe editsnipe remind poll suggest firstmsg emoji emojis emojisearch",
-"AI & Minecraft":"ai notify mcstatus mcprofile"};
+"Moderation & safety":"tempban temprole automod banwords strikes logs autoreact",
+"Server setup":"welcome goodbye boostreminder reactionrole verify voicemaster serverstats autorole",
+"Tickets & giveaways":"ticket giveaway",
+"Invites":"invites invite-tracker invitestats invitereset",
+"Levels & profiles":"rank levels level-leaderboard leaderboard profile birthday",
+"Utility & AI":"help ping botinfo health serverinfo userinfo membercount avatar emoji emojisearch ai features vote notify say poll embed editembed copyembed autoresponse autoresponse-list autoresponse-remove"
+};
 var CP={
-"Fun":"joke fact quote cat dog meme 8ball coinflip dice rate choose reverse ascii mock clap iq ship roast compliment truth dare wyr topic rps",
-"Actions":"hug pat slap poke highfive cuddle bonk wave",
-"Utility":"help ping uptime bot botinvite invite inviteleaderboard avatar banner userinfo serverinfo membercount servericon roleinfo calc timestamp afk snipe editsnipe remind rank bal poll nick",
-"Moderation":"kick ban unban timeout untimeout purge lock unlock slowmode addrole removerole"};
+"Fun":"joke dadjoke fact quote cat dog meme 8ball coinflip dice rate choose reverse ascii mock clap gay iq ship roast compliment truth dare wyr topic rps",
+"Utility":"help ping latency uptime bot about vortexia botinvite invite inviteleaderboard avatar banner userinfo serverinfo membercount servericon roleinfo calc timestamp afk snipe editsnipe remind rank bal cash poll gradient calendar mcstats mcprofile translate weather wikipedia urban google qr shorturl color countdown timezone currency unitconvert randomnumber randomuser permissions channelclone audit",
+"Moderation":"kick ban unban timeout mute untimeout unmute purge lock unlock slowmode nick addrole removerole"
+};
+var VS={
+"Animals & quests":"hunt zoo dex sell sac team pet rename battle huntbot quest checklist",
+"Weapons & inventory":"weapon crate lootbox shop buy inv",
+"V-Cash economy":"cash daily work pay top cf slots blackjack lottery",
+"Luck & relationships":"pray curse cookie marry divorce ship",
+"Fun & profiles":"8b choose roll uwuify define profile level rank ping help",
+"Social actions":"hug kiss pat cuddle slap punch lick bite poke nom bully wave highfive kick tickle wink yeet cry dance blush peck feed handhold baka shoot stare smile laugh pout sleep think shrug facepalm thumbsup nod nope smug yawn bored happy boop salute clap cheer kill"
+};
 var mode="s",cat=null;
-function data(){return mode=="s"?CS:CP}
+function data(){return mode=="s"?CS:mode=="p"?CP:VS}
 function tabs(){var D=data(),ks=Object.keys(D);if(!cat||!D[cat])cat=ks[0];$("#tabs").innerHTML=ks.map(function(k){return'<button class="tab'+(k==cat&&!$("#q").value?' on':'')+'">'+esc(k)+'</button>'}).join("");$$(".tab").forEach(function(t){t.onclick=function(){$("#q").value="";cat=t.textContent;tabs();list()}})}
-function list(){var D=data(),q=$("#q").value.trim().toLowerCase().replace(/^[\/?]/,""),pre=mode=="s"?"/":"?",items;
+function list(){var D=data(),q=$("#q").value.trim().toLowerCase().replace(/^[\/?]/,""),pre=mode=="s"?"/":mode=="p"?"?":"v ",items;
   if(q){items=[];Object.keys(D).forEach(function(k){D[k].split(" ").forEach(function(c){if(c.indexOf(q)>-1)items.push(c)})})}else items=D[cat].split(" ");
   $("#cmds").innerHTML=items.length?items.map(function(c,n){return'<button style="--n:'+Math.min(n,30)+'" data-c="'+pre+c+'">'+pre+c+'</button>'}).join(""):'<p class="note">No command matches “'+esc(q)+'”.</p>';
-  $("#cn").innerHTML=mode=="s"?'Music also has a control panel with queue, filters, lyrics and 24/7 buttons. Type <code>/help</code> in Discord for everything.':'Prefix commands start with <code>?</code>. Type <code>?help</code> in Discord for the full list.';
+  $("#cn").innerHTML=mode=="s"?'Slash commands are grouped by feature. Some commands include subcommands; use <code>/help</code> in Discord for their options.':mode=="p"?'Quick commands start with <code>?</code>. Use <code>?help</code> in Discord for the live prefix list.':'V-Game uses the <code>v</code> prefix and includes animals, battles, weapons, V-Cash, quests and social actions. Use <code>v help</code> in Discord for the in-bot catalogue.';
   $$("#cmds button").forEach(function(b){b.onclick=function(){var c=b.dataset.c;(navigator.clipboard?navigator.clipboard.writeText(c):Promise.reject()).then(function(){toast("Copied "+c)},function(){toast(c)})}})}
 $$(".seg button").forEach(function(b){b.onclick=function(){mode=b.dataset.m;cat=null;$("#q").value="";$$(".seg button").forEach(function(x){x.classList.toggle("on",x==b)});tabs();list()}});
 $("#q").oninput=function(){tabs();list()};

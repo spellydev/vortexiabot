@@ -1,0 +1,1490 @@
+[
+  {
+    "name": "/play",
+    "category": "🎵 Music",
+    "description": "Open Vortexia’s interactive music player.",
+    "usage": "Join a voice channel, then run `/play`. Use the player controls to search, select, queue and control tracks."
+  },
+  {
+    "name": "/tempban",
+    "category": "🛡️ Moderation & safety",
+    "description": "Schedule a temporary ban that automatically expires.",
+    "usage": "Use `/tempban add`, select a member, enter a duration such as `2h` or `1d`, and optionally add a reason. Use `remove`, `list` or `info` to manage it."
+  },
+  {
+    "name": "/temprole",
+    "category": "🛡️ Moderation & safety",
+    "description": "Give a member a role for a limited time.",
+    "usage": "Use `/temprole add`, select the member and role, then enter a duration such as `30m` or `7d`. The role is removed automatically when time expires."
+  },
+  {
+    "name": "/automod",
+    "category": "🛡️ Moderation & safety",
+    "description": "Configure or run a server moderation and safety tool.",
+    "usage": "Run `/automod` using Discord’s slash-command picker, then complete the required member, duration, rule or setting fields. You need the required server permissions."
+  },
+  {
+    "name": "/banwords",
+    "category": "🛡️ Moderation & safety",
+    "description": "Configure or run a server moderation and safety tool.",
+    "usage": "Run `/banwords` using Discord’s slash-command picker, then complete the required member, duration, rule or setting fields. You need the required server permissions."
+  },
+  {
+    "name": "/strikes",
+    "category": "🛡️ Moderation & safety",
+    "description": "Configure or run a server moderation and safety tool.",
+    "usage": "Run `/strikes` using Discord’s slash-command picker, then complete the required member, duration, rule or setting fields. You need the required server permissions."
+  },
+  {
+    "name": "/logs set",
+    "category": "🛡️ Moderation & safety",
+    "description": "Choose where server event and moderation logs are sent.",
+    "usage": "Run `/logs set` and select the destination channel."
+  },
+  {
+    "name": "/logs toggle",
+    "category": "🛡️ Moderation & safety",
+    "description": "Enable or pause event logging.",
+    "usage": "Run `/logs toggle` and follow the option shown by Discord."
+  },
+  {
+    "name": "/logs status",
+    "category": "🛡️ Moderation & safety",
+    "description": "View the current logging configuration.",
+    "usage": "Run `/logs status`."
+  },
+  {
+    "name": "/logs disable",
+    "category": "🛡️ Moderation & safety",
+    "description": "Disable the configured logging system.",
+    "usage": "Run `/logs disable`."
+  },
+  {
+    "name": "/autoreact add",
+    "category": "🛡️ Moderation & safety",
+    "description": "Add an automatic reaction for a channel.",
+    "usage": "Run `/autoreact add`, select a channel, then enter a Unicode or custom emoji. Up to five reactions can be configured per channel."
+  },
+  {
+    "name": "/autoreact remove",
+    "category": "🛡️ Moderation & safety",
+    "description": "Remove an automatic channel reaction.",
+    "usage": "Run `/autoreact remove`, select the channel and enter the exact emoji configured for removal."
+  },
+  {
+    "name": "/autoreact list",
+    "category": "🛡️ Moderation & safety",
+    "description": "List automatic reactions configured for a channel.",
+    "usage": "Run `/autoreact list` and optionally select a channel."
+  },
+  {
+    "name": "/welcome",
+    "category": "👋 Server setup & roles",
+    "description": "Configure automatic welcome messages for new members.",
+    "usage": "Run `/welcome` and choose the setup options Discord displays, such as the destination channel and message."
+  },
+  {
+    "name": "/goodbye setup",
+    "category": "👋 Server setup & roles",
+    "description": "Configure the message sent when a member leaves.",
+    "usage": "Run `/goodbye setup`, choose the text channel, and optionally customize the message with `{user}`, `{username}`, `{server}` or `{membercount}`."
+  },
+  {
+    "name": "/goodbye status",
+    "category": "👋 Server setup & roles",
+    "description": "Show the current goodbye-message configuration.",
+    "usage": "Run `/goodbye status` in your server."
+  },
+  {
+    "name": "/goodbye disable",
+    "category": "👋 Server setup & roles",
+    "description": "Turn off automatic goodbye messages.",
+    "usage": "Run `/goodbye disable`."
+  },
+  {
+    "name": "/boostreminder setup",
+    "category": "👋 Server setup & roles",
+    "description": "Set up announcements when a member boosts your server.",
+    "usage": "Run `/boostreminder setup`, choose an announcement channel, and optionally customize the message with `{user}`, `{username}` or `{server}`."
+  },
+  {
+    "name": "/boostreminder status",
+    "category": "👋 Server setup & roles",
+    "description": "Show boost-announcement settings.",
+    "usage": "Run `/boostreminder status`."
+  },
+  {
+    "name": "/boostreminder disable",
+    "category": "👋 Server setup & roles",
+    "description": "Disable boost announcements.",
+    "usage": "Run `/boostreminder disable`."
+  },
+  {
+    "name": "/reactionrole panel",
+    "category": "👋 Server setup & roles",
+    "description": "Create a reaction-role panel members can use to select roles.",
+    "usage": "Run `/reactionrole panel` and follow the prompts to choose a channel and panel settings."
+  },
+  {
+    "name": "/reactionrole add",
+    "category": "👋 Server setup & roles",
+    "description": "Add a role option to a reaction-role panel.",
+    "usage": "Run `/reactionrole add`, then choose the panel, emoji and role."
+  },
+  {
+    "name": "/reactionrole remove",
+    "category": "👋 Server setup & roles",
+    "description": "Remove an option from a reaction-role panel.",
+    "usage": "Run `/reactionrole remove` and select the option to remove."
+  },
+  {
+    "name": "/reactionrole list",
+    "category": "👋 Server setup & roles",
+    "description": "List configured reaction-role panels.",
+    "usage": "Run `/reactionrole list`."
+  },
+  {
+    "name": "/verify setup",
+    "category": "👋 Server setup & roles",
+    "description": "Set up the server verification flow.",
+    "usage": "Run `/verify setup` and choose the verification channel and role requested by Discord."
+  },
+  {
+    "name": "/verify status",
+    "category": "👋 Server setup & roles",
+    "description": "Check verification settings.",
+    "usage": "Run `/verify status`."
+  },
+  {
+    "name": "/verify disable",
+    "category": "👋 Server setup & roles",
+    "description": "Disable the verification system.",
+    "usage": "Run `/verify disable`."
+  },
+  {
+    "name": "/voicemaster setup",
+    "category": "👋 Server setup & roles",
+    "description": "Configure temporary voice-channel creation.",
+    "usage": "Run `/voicemaster setup` and select the join-to-create channel and category/options shown."
+  },
+  {
+    "name": "/voicemaster panel",
+    "category": "👋 Server setup & roles",
+    "description": "Open or post the VoiceMaster control panel.",
+    "usage": "Run `/voicemaster panel` and follow the channel prompt."
+  },
+  {
+    "name": "/voicemaster status",
+    "category": "👋 Server setup & roles",
+    "description": "Show VoiceMaster configuration.",
+    "usage": "Run `/voicemaster status`."
+  },
+  {
+    "name": "/voicemaster disable",
+    "category": "👋 Server setup & roles",
+    "description": "Disable VoiceMaster channel creation.",
+    "usage": "Run `/voicemaster disable`."
+  },
+  {
+    "name": "/serverstats",
+    "category": "👋 Server setup & roles",
+    "description": "Configure a server automation or member-management feature.",
+    "usage": "Run the command and select the channel, role or options requested by Discord. Check role hierarchy and permissions."
+  },
+  {
+    "name": "/autorole",
+    "category": "👋 Server setup & roles",
+    "description": "Configure a server automation or member-management feature.",
+    "usage": "Run the command and select the channel, role or options requested by Discord. Check role hierarchy and permissions."
+  },
+  {
+    "name": "/ticket setup",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Create the ticket panel and configure its destination.",
+    "usage": "Run `/ticket setup` and follow Discord’s prompts to choose the panel channel and support settings."
+  },
+  {
+    "name": "/ticket edit",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Edit an existing ticket panel or its settings.",
+    "usage": "Run `/ticket edit` and select the panel/settings to change."
+  },
+  {
+    "name": "/ticket close",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Close the current ticket.",
+    "usage": "Run `/ticket close` inside the ticket channel."
+  },
+  {
+    "name": "/ticket add",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Add a member to the current ticket.",
+    "usage": "Run `/ticket add` in the ticket channel and select the member."
+  },
+  {
+    "name": "/ticket remove",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Remove a member from the current ticket.",
+    "usage": "Run `/ticket remove` and select the member."
+  },
+  {
+    "name": "/ticket rename",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Rename the current ticket channel.",
+    "usage": "Run `/ticket rename` in the ticket channel and enter the new name."
+  },
+  {
+    "name": "/ticket claim",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Claim a ticket so staff know who is handling it.",
+    "usage": "Run `/ticket claim` in the ticket channel."
+  },
+  {
+    "name": "/ticket list",
+    "category": "🎫 Tickets & giveaways",
+    "description": "List tickets for the server.",
+    "usage": "Run `/ticket list` to view ticket records."
+  },
+  {
+    "name": "/giveaway create",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Start a giveaway with the configured prize and duration.",
+    "usage": "Run `/giveaway create` and complete the prize, duration, winner-count and channel fields Discord displays."
+  },
+  {
+    "name": "/giveaway panel",
+    "category": "🎫 Tickets & giveaways",
+    "description": "Open the giveaway management panel.",
+    "usage": "Run `/giveaway panel` to create or manage giveaways with the interactive controls."
+  },
+  {
+    "name": "/giveaway list",
+    "category": "🎫 Tickets & giveaways",
+    "description": "View active and past giveaways.",
+    "usage": "Run `/giveaway list`."
+  },
+  {
+    "name": "/invites",
+    "category": "📨 Invites",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/invites` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/invite-tracker",
+    "category": "📨 Invites",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/invite-tracker` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/invitestats",
+    "category": "📨 Invites",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/invitestats` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/invitereset",
+    "category": "📨 Invites",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/invitereset` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/rank",
+    "category": "📈 Levels, profiles & birthdays",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/rank` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/levels",
+    "category": "📈 Levels, profiles & birthdays",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/levels` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/level-leaderboard",
+    "category": "📈 Levels, profiles & birthdays",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/level-leaderboard` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/leaderboard",
+    "category": "📈 Levels, profiles & birthdays",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/leaderboard` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/profile",
+    "category": "📈 Levels, profiles & birthdays",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/profile` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/birthday",
+    "category": "📈 Levels, profiles & birthdays",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/birthday` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/help",
+    "category": "🧰 Utility, AI & community",
+    "description": "Show Vortexia’s slash-command help.",
+    "usage": "Run `/help` and browse the available commands."
+  },
+  {
+    "name": "/ping",
+    "category": "🧰 Utility, AI & community",
+    "description": "Check whether Vortexia is responding.",
+    "usage": "Run `/ping`."
+  },
+  {
+    "name": "/botinfo",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/botinfo` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/health",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/health` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/serverinfo",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/serverinfo` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/userinfo",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/userinfo` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/membercount",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/membercount` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/avatar",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/avatar` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/emoji",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/emoji` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/emojisearch",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/emojisearch` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/ai",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/ai` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/features",
+    "category": "🧰 Utility, AI & community",
+    "description": "Show Vortexia’s available feature modules.",
+    "usage": "Run `/features` to see supported systems."
+  },
+  {
+    "name": "/vote",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/vote` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/notify",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/notify` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/say",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/say` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/poll",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/poll` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/embed",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/embed` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/editembed",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/editembed` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/copyembed",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/copyembed` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/autoresponse",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/autoresponse` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/autoresponse-list",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/autoresponse-list` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "/autoresponse-remove",
+    "category": "🧰 Utility, AI & community",
+    "description": "Run a Vortexia slash command.",
+    "usage": "In Discord, type `/` and select `/autoresponse-remove` from Vortexia. Complete the required fields shown in the command form."
+  },
+  {
+    "name": "?help",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Show the public prefix-command help.",
+    "usage": "Type `?help` in a text channel."
+  },
+  {
+    "name": "?joke",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?joke`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?dadjoke",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?dadjoke`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?fact",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?fact`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?quote",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?quote`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?cat",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?cat`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?dog",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?dog`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?meme",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?meme`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?8ball",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?8ball`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?coinflip",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?coinflip`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?dice",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?dice`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?rate",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?rate`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?choose",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?choose`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?reverse",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?reverse`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?ascii",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?ascii`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?mock",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?mock`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?clap",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?clap`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?gay",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?gay`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?iq",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?iq`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?ship",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?ship`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?roast",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?roast`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?compliment",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?compliment`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?truth",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?truth`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?dare",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?dare`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?wyr",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?wyr`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?topic",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?topic`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?rps",
+    "category": "🎲 Quick fun commands · ?",
+    "description": "Run a quick fun or community command.",
+    "usage": "Type `?rps`. If it needs a prompt, target or choice, add it after the command."
+  },
+  {
+    "name": "?ping",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?ping <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?uptime",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?uptime <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?bot",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?bot <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?botinvite",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?botinvite <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?invite",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?invite <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?inviteleaderboard",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?inviteleaderboard <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?avatar",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?avatar <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?banner",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?banner <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?userinfo",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?userinfo <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?serverinfo",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?serverinfo <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?membercount",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?membercount <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?servericon",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?servericon <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?roleinfo",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?roleinfo <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?calc",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?calc <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?timestamp",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?timestamp <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?afk",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?afk <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?snipe",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?snipe <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?editsnipe",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?editsnipe <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?remind",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?remind <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?rank",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?rank <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?bal",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?bal <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?poll",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?poll <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?gradient",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?gradient <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?calendar",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?calendar <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?translate",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?translate <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?weather",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?weather <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?wikipedia",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?wikipedia <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?urban",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?urban <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?google",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?google <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?qr",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?qr <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?shorturl",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?shorturl <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?color",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?color <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?countdown",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?countdown <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?timezone",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?timezone <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?currency",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?currency <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?unitconvert",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?unitconvert <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?randomnumber",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?randomnumber <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?randomuser",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?randomuser <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?permissions",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?permissions <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?channelclone",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?channelclone <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?audit",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?audit <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?mcstats",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Run a quick utility or information lookup.",
+    "usage": "Type `?mcstats <value>` when the command needs a name, URL, amount, location or other input. The bot response will show the result."
+  },
+  {
+    "name": "?mcprofile",
+    "category": "🧰 Quick utility commands · ?",
+    "description": "Look up a Minecraft player profile.",
+    "usage": "Use `?mcprofile <player-name>`."
+  },
+  {
+    "name": "?kick",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?kick <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?ban",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?ban <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?unban",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?unban <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?timeout",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?timeout <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?mute",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?mute <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?untimeout",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?untimeout <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?unmute",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?unmute <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?purge",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?purge <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?lock",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?lock <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?unlock",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?unlock <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?slowmode",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?slowmode <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?nick",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?nick <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?addrole",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?addrole <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "?removerole",
+    "category": "🛡️ Quick moderation commands · ?",
+    "description": "Run a quick prefix moderation action.",
+    "usage": "Type `?removerole <member>` or add the argument requested by the bot. You need the relevant Discord moderation permission; role hierarchy still applies."
+  },
+  {
+    "name": "v hunt",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v hunt` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v zoo",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v zoo` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v dex",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v dex` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v sell",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v sell` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v sac",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v sac` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v team",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v team` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v pet",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v pet` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v rename",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v rename` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v battle",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v battle` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v huntbot",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v huntbot` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v quest",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v quest` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v checklist",
+    "category": "🐾 V-Game: animals & quests · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v checklist` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v weapon",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v weapon` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v crate",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v crate` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v lootbox",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v lootbox` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v shop",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v shop` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v buy",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v buy` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v inv",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v inv` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v cash",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v cash` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v daily",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v daily` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v work",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v work` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v pay",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v pay` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v top",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v top` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v cf",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v cf` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v slots",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v slots` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v blackjack",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v blackjack` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v lottery",
+    "category": "⚔️ V-Game: weapons, inventory & V-Cash · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v lottery` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v pray",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v pray` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v curse",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v curse` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v cookie",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v cookie` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v marry",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v marry` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v divorce",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v divorce` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v ship",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v ship` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v 8b",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v 8b` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v choose",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v choose` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v roll",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v roll` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v uwuify",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v uwuify` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v define",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v define` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v profile",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v profile` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v level",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v level` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v rank",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v rank` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v ping",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v ping` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v help",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v help` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v hug",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v hug` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v kiss",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v kiss` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v pat",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v pat` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v cuddle",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v cuddle` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v slap",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v slap` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v punch",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v punch` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v lick",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v lick` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v bite",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v bite` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v poke",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v poke` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v nom",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v nom` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v bully",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v bully` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v wave",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v wave` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v highfive",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v highfive` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v kick",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v kick` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v tickle",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v tickle` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v wink",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v wink` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v yeet",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v yeet` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v cry",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v cry` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v dance",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v dance` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v blush",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v blush` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v peck",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v peck` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v feed",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v feed` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v handhold",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v handhold` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v baka",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v baka` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v shoot",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v shoot` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v stare",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v stare` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v smile",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v smile` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v laugh",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v laugh` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v pout",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v pout` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v sleep",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v sleep` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v think",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v think` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v shrug",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v shrug` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v facepalm",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v facepalm` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v thumbsup",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v thumbsup` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v nod",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v nod` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v nope",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v nope` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v smug",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v smug` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v yawn",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v yawn` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v bored",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v bored` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v happy",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v happy` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v boop",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v boop` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v salute",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v salute` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v clap",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v clap` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v cheer",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v cheer` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  },
+  {
+    "name": "v kill",
+    "category": "🍀 V-Game: luck, social & fun · v",
+    "description": "Run a V-Game action or game command.",
+    "usage": "Type `v kill` in a server channel. If the command needs a target or option, add the value shown by `v help` or the bot prompt."
+  }
+]

@@ -1,7 +1,7 @@
 # Vortexia Bot — https://vortexia.top
 User-agent: *
 Allow: /
-Disallow: /dashboard/
+Disallow: /control panel/
 
 User-agent: Googlebot
 Allow: /
