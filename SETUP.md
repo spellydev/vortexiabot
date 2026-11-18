@@ -1,19 +1,21 @@
 # Vortexia Website — Static Deployment
 
-This archive contains the **website only**. The Discord bot remains a separate project and must be deployed from its own bot package.
+This archive contains the static website only. The Discord bot is a separate runtime project.
 
-## Website details
-
+## Main pages
 - Main website: https://vortexia.top/
 - Commands: https://vortexia.top/commands/
 - Documentation: https://docs.vortexia.top/
+- Privacy Policy: https://vortexia.top/privacy/
+- Terms of Service: https://vortexia.top/terms/
+- Message Content Intent review guide: https://vortexia.top/message-content-intent/
 - Support: https://discord.gg/7RfWAKeAZZ
 
 ## Deploy
+1. Extract the archive.
+2. Upload the contents of `vortexiabot-main/` to the static host's root/public directory.
+3. Keep `CNAME` at the website root for GitHub Pages custom-domain hosting.
+4. Confirm the three policy/review URLs are publicly reachable over HTTPS.
+5. Check the privacy policy against the exact production bot configuration and hosting provider before submitting any Discord review.
 
-1. Extract this ZIP.
-2. Upload the contents of the extracted website folder to the root/public directory of your static hosting provider.
-3. Keep the `CNAME` file at the website root when using GitHub Pages with `vortexia.top`.
-4. Open `https://vortexia.top/` and `https://vortexia.top/commands/` to verify the deployment.
-
-This website package does not contain Discord OAuth routes, bot API proxies, or bot runtime files. Do not add bot tokens, OAuth client secrets, API keys, or session secrets to this public website repository.
+This package contains no Discord OAuth routes, bot API proxy, bot runtime, bot token or API secrets. Never place secrets in this public website repository.
